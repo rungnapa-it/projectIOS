@@ -120,6 +120,17 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1ad-fZ-55j">
+                                        <rect key="frame" x="29" y="727" width="320" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.90826189517974854" green="0.55204558372497559" blue="0.61568754911422729" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <state key="normal" title="BLACK">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="wwl-IX-mu8" kind="show" id="p0C-2p-z7S"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="0.74999882380000005" blue="0.75424122839999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </view>
@@ -130,7 +141,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LDO-f4-Plu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-23" y="102"/>
+            <point key="canvasLocation" x="-23.188405797101453" y="101.78571428571428"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="jrX-LA-g7Q">
@@ -202,6 +213,9 @@
                                                 <state key="normal" title="ENTER">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <segue destination="wwl-IX-mu8" kind="show" id="yK7-Rh-t27"/>
+                                                </connections>
                                             </button>
                                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter pin room" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lfm-PO-2S2">
                                                 <rect key="frame" x="94" y="341" width="142" height="30"/>
@@ -218,6 +232,9 @@
                                                 <state key="normal" title="RANDOM PIN ROOM">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <segue destination="wwl-IX-mu8" kind="show" id="5Ps-zX-8wL"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="or" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yM9-W7-1rm">
                                                 <rect key="frame" x="189" y="379" width="16" height="21"/>
@@ -288,6 +305,9 @@
                                                 <state key="normal" title="ENTER">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <segue destination="HgM-D4-H5A" kind="show" id="uSJ-No-BY6"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ENTER YOUR NAME :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JOt-oQ-6ZJ">
                                                 <rect key="frame" x="89" y="329" width="217" height="28"/>
@@ -381,6 +401,9 @@
                                         <state key="normal" title="GO">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="EAH-V2-pM9" kind="show" id="YI1-OB-Hsj"/>
+                                        </connections>
                                     </button>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="PIN ROOM :" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ls4-fb-OmU">
                                         <rect key="frame" x="50" y="106" width="119" height="27"/>
@@ -393,6 +416,9 @@
                                         <state key="normal" title="ADD THE QUESTION">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="Jjh-su-TKz" kind="show" id="HN7-80-vYH"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xkV-eO-cKM">
                                         <rect key="frame" x="83" y="712" width="248" height="30"/>
@@ -639,4 +665,7 @@
             <point key="canvasLocation" x="1423" y="102"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="p0C-2p-z7S"/>
+    </inferredMetricsTieBreakers>
 </document>
