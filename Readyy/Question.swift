@@ -12,18 +12,24 @@ class Question {
     var name:String
     var ans:String
     var point:Int
+    var questionOrder:Int
     
     init() {
         self.id = ""
         self.name = ""
         self.ans = ""
-        self.point = 0
+        self.point = 10
+        self.questionOrder = 100
     }
     
     func setId(){
-        self.id = ""
+        self.id = "d\(getQuestionOrder())"
+        setQuestionOrder()
     }
     
+    func setQuestionOrder(){
+        self.questionOrder+=1
+    }
     func setName(name:String)  {
         self.name = name
         print("Question : \(name)")
@@ -53,6 +59,16 @@ class Question {
     func getPoin() -> Int{
         return point
     }
+    
+    func getQuestionOrder() -> Int{
+        return questionOrder
+    }
+    func questionJSON() -> String {
+        return "[{\"id\":\"\(id)\",\"name\":\"\(name)\",\"ans\":\"\(ans)\",\"point\":\"\(point)\"}]";
+    }
+    
+    
+    
     
     
 }

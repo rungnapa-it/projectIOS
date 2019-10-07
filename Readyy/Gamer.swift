@@ -12,21 +12,31 @@ class Gamer {
     var name:String
     var score:Int
     var high_score:Int
+    var orderId:Int
     
     init(name:String) {
         self.id = ""
         self.name = name
         self.score = 0
         self.high_score = 0
+        self.orderId = 100
     }
     
     func setId() {
-        self.id = ""
+        self.id = "G\(getOrderId())"
+        setOrderId()
+
+    }
+    
+    func setOrderId() {
+        self.orderId+=1
     }
     
     func setName(name:String)  {
         self.name = name
         print(name)
+        print(gamerJSON())
+       
     }
     
     func setScore(score:Int)  {
@@ -52,6 +62,15 @@ class Gamer {
     func getHigh_score() -> Int {
         return high_score
     }
+    
+    func getOrderId() -> Int {
+        return orderId
+    }
+    
+    func gamerJSON() -> String {
+        return "[{\"id\":\"\(id)\",\"name\":\"\(name)\",\"score\":\"\(score)\",\"high_score\":\"\(high_score)\"}]";
+    }
+    
 }
 
 

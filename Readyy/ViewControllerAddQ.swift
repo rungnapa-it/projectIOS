@@ -23,11 +23,8 @@ class ViewControllerAddQ: UIViewController {
     var buttonC:Bool! = false
     var buttonD:Bool! = false
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
+    
+    
     @IBAction func ansA(_ sender: Any) {
         if (buttonB == false && buttonC == false && buttonD == false){
             buttonA = true
@@ -36,14 +33,33 @@ class ViewControllerAddQ: UIViewController {
         
     }
     @IBAction func ansB(_ sender: Any) {
+        if (buttonA == false && buttonC == false && buttonD == false){
+            buttonB = true
+            question.setAns(ans: labelChoices2.text!)
+        }
     }
     @IBAction func ansC(_ sender: Any) {
+        if (buttonA == false && buttonB == false && buttonD == false ){
+            buttonC = true
+            question.setAns(ans: labelChoices3.text!)
+        }
     }
     @IBAction func ansD(_ sender: Any) {
+        if (buttonA == false && buttonB == false && buttonC == false){
+            buttonD = false
+            question.setAns(ans: laberChoices4.text!)
+        }
     }
     
     
     @IBAction func buttonAdd(_ sender: Any){
+        buttonA = true
+        buttonB = true
+        buttonC = true
+        buttonD = true
+        question.setId()
+        
+        choices.setId(questionId: question.getId())
         let q:String = labelQuestion.text!
         let c1:String = labelChoices1.text!
         let c2:String = labelChoices2.text!
@@ -54,6 +70,9 @@ class ViewControllerAddQ: UIViewController {
         choices.setChoices2(choices2: c2)
         choices.setChoices3(choices3: c3)
         choices.setChoices4(choices4: c4)
+        print(question.questionJSON())
+        print(choices.choicesJSON())
+        
         
         
     }

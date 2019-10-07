@@ -15,17 +15,21 @@ class Choices{
     var choices4: String = ""
     
     
+    
     init() {
         self.id = "";
         self.choices1 = ""
         self.choices2 = ""
         self.choices3 = ""
         self.choices4 = ""
-    }
-    func setId(id:String)  {
-        self.id = id
+        
     }
     
+    func setId(questionId:String)  {
+        self.id = questionId
+    }
+    
+   
     func setChoices1(choices1:String)  {
         self.choices1 = choices1
         print("Choices1: \(choices1)")
@@ -44,6 +48,7 @@ class Choices{
     func setChoices4(choices4:String)  {
         self.choices4 = choices4
         print("Choices4: \(choices4)")
+        
     }
     
     func getId() -> String {
@@ -65,6 +70,13 @@ class Choices{
     func getChoices4() -> String {
         return choices4
     }
+    
+    
+    func choicesJSON() -> String {
+        return "[{\"id\":\"\(id)\",\"choices1\":\"\(choices1)\",\"choices2\":\"\(choices2)\",\"choices3\":\"\(choices3)\",\"choices4\":\"\(choices4)\"}]";
+    }
+    
+    
     
     
     

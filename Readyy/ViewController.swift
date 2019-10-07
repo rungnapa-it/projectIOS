@@ -17,7 +17,9 @@ class ViewController: UIViewController {
     }
     @IBAction func Enter(_ sender: Any) {
         let name:String = fieldname.text!
+        gamer.setId()
         gamer.setName(name: name)
+        
     }
     
 }
