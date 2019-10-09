@@ -60,7 +60,8 @@ class ViewControllerWait: UIViewController {
                 }
                 if let data = data, let dataString = String(data: data, encoding: .utf8) {
                     self.question.questionJSON(json:dataString)
-                    self.setQuestion(qu: self.question);           //print("data: \(dataString)")
+                    self.setQuestion(qu: self.question);
+                    print("data: \(dataString)")
                 }
             }
         }
