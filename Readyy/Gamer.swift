@@ -8,6 +8,7 @@
 
 import Foundation
 class Gamer {
+
     var id:String
     var name:String
     var score:Int
@@ -22,11 +23,14 @@ class Gamer {
         self.orderId = 100
     }
     
+    func printtest(text:String)  {
+        print("class : \(text)")
+    }
     func setId() {
         self.id = "G\(getOrderId())"
-        setOrderId()
+       setOrderId()
 
-    }
+   }
     
     func setOrderId() {
         self.orderId+=1
@@ -35,7 +39,7 @@ class Gamer {
     func setName(name:String)  {
         self.name = name
         print(name)
-        print(gamerJSON())
+        //print(gamerJSON())
        
     }
     
@@ -67,9 +71,11 @@ class Gamer {
         return orderId
     }
     
-    func gamerJSON() -> String {
+   func getJSON() -> String {
         return "[{\"id\":\"\(id)\",\"name\":\"\(name)\",\"score\":\"\(score)\",\"high_score\":\"\(high_score)\"}]";
     }
+    
+   
     
 }
 

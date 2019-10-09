@@ -70,8 +70,8 @@ class ViewControllerAddQ: UIViewController {
         choices.setChoices2(choices2: c2)
         choices.setChoices3(choices3: c3)
         choices.setChoices4(choices4: c4)
-        print(question.questionJSON())
-        print(choices.choicesJSON())
+        //print(question.questionJSON())
+        //print(choices.getJSON())
         
         
         

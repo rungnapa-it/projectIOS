@@ -158,7 +158,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cS8-fN-xA5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="151" y="50"/>
+            <point key="canvasLocation" x="-17" y="-97"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="jrX-LA-g7Q">
@@ -337,6 +337,14 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1gh-w1-oUx">
+                                                <rect key="frame" x="174" y="485" width="46" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="post:" destination="BYZ-38-t0r" eventType="touchDragInside" id="l2c-oc-EtD"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" red="1" green="0.74999882380000005" blue="0.75424122839999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     </view>
@@ -367,10 +375,10 @@
             </objects>
             <point key="canvasLocation" x="-2126" y="103"/>
         </scene>
-        <!--View Controller-->
+        <!--View Controller Wait-->
         <scene sceneID="7Zg-gi-cNE">
             <objects>
-                <viewController id="wwl-IX-mu8" sceneMemberID="viewController">
+                <viewController id="wwl-IX-mu8" customClass="ViewControllerWait" customModule="Readyy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7sU-ht-JA8">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -415,6 +423,7 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
+                                            <action selector="Playing:" destination="wwl-IX-mu8" eventType="touchDragInside" id="Ptv-f6-whH"/>
                                             <segue destination="EAH-V2-pM9" kind="show" id="YI1-OB-Hsj"/>
                                         </connections>
                                     </button>
@@ -690,6 +699,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Wh5-AQ-j93"/>
+        <segue reference="mgG-O3-2wH"/>
     </inferredMetricsTieBreakers>
 </document>

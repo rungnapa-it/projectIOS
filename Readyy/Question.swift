@@ -32,12 +32,12 @@ class Question {
     }
     func setName(name:String)  {
         self.name = name
-        print("Question : \(name)")
+        //print("Question : \(name)")
     }
     
     func setAns(ans:String)  {
         self.ans = ans
-        print("Ans: \(ans)")
+        //print("Ans: \(ans)")
     }
     
     func setPoint(point:Int){
@@ -63,10 +63,32 @@ class Question {
     func getQuestionOrder() -> Int{
         return questionOrder
     }
-    func questionJSON() -> String {
+    func getJSON() -> String {
         return "[{\"id\":\"\(id)\",\"name\":\"\(name)\",\"ans\":\"\(ans)\",\"point\":\"\(point)\"}]";
     }
     
+    func questionJSON(json:String) {
+        step1(json: json)
+    }
+    
+    func step1(json:String)  {
+        var strArray = json.components(separatedBy: "},")
+        for i in 0..<strArray.endIndex{
+            var part1 = strArray[i]
+            step2(json: part1)
+        }
+    }
+    
+    func step2(json:String)  {
+        var strArray = json.components(separatedBy: ",")
+        let id = strArray[0]
+        let name = strArray[1]
+        let ans = strArray[2]
+        let point = strArray[3]
+        
+        print("id : \(id) \n name : \(name) \n ans : \(ans) \n point : \(point)")
+    
+    }
     
     
     
