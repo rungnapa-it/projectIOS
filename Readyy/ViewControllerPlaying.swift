@@ -27,10 +27,20 @@ class ViewControllerPlaying: UIViewController {
 
 
     func ready () {
-        
-       // print("test : \(question.getName())")
-        
+        let dictionary = choices.getDictionary()
+        for (key,value) in dictionary{
+            
+            let qu = question.getNameIndex(id: key)
+            print(qu)
+            for (name) in value {
+                print(name)
+            }
+            
+            
+        }
     }
-}
 
+
+
+}
 

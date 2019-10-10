@@ -26,28 +26,6 @@ class ViewControllerWait: UIViewController {
         //getQuestion()
     }
     
-    func getChoies() {
-        
-        let url = URL(string: "http://localhost:8081/choices")!
-        let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
-            if let error = error {
-                print("error: \(error)")
-            } else {
-                if let response = response as? HTTPURLResponse {
-                    //print("statusCode: \(response.statusCode)")
-                }
-                if let data = data, let dataString = String(data: data, encoding: .utf8) {
-                    
-                    choices.choicesJSON(text: dataString)
-                    //self.setChoices(ch:self.choices)
-                    //print("data: \(dataString)")
-                }
-            }
-        }
-        task.resume()
-       
-    
-    }
     
     func getQuestion()  {
         let url = URL(string: "http://localhost:8081/question")!
@@ -62,12 +40,34 @@ class ViewControllerWait: UIViewController {
                     
                     question.questionJSON(json: dataString)
                     //self.setQuestion(q: self.question);
-                    //print("data: \(dataString)")
+                    //print("dataQuestion: \(dataString)")
                 }
             }
         }
         task.resume()
          getChoies()
+        
+    }
+    func getChoies() {
+        
+        let url = URL(string: "http://localhost:8081/choices")!
+        let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
+            if let error = error {
+                print("error: \(error)")
+            } else {
+                if let response = response as? HTTPURLResponse {
+                    //print("statusCode: \(response.statusCode)")
+                }
+                if let data = data, let dataString = String(data: data, encoding: .utf8) {
+                    
+                    choices.choicesJSON(text: dataString)
+                    //self.setChoices(ch:self.choices)
+                    //print("dataChoices: \(dataString)")
+                }
+            }
+        }
+        task.resume()
+        
         
     }
     

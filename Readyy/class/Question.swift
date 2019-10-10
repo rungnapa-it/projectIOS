@@ -97,21 +97,23 @@ class Question {
        // print("-------- \(dict)\n")
     
     func getDictionary() {
-        print("\(dict)")
+       // print("\(dict)")
     }
 
-    func getNameIndex(id:String)-> String{
+    func getNameIndex(id:String) -> String{
         
-        var key = ""
+        var nameQuestion = ""
         for (key,value) in dict {
-            print("\(key) \(id)")
             if (key == id){
-                print(key)
-                break
+                for (name) in value{
+                    nameQuestion = name
+                    break
+                }
+                
             }
         }
        
-        return key
+        return nameQuestion
     }
     
     

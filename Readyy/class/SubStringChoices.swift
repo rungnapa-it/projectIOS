@@ -10,6 +10,7 @@ import Foundation
 class SubStringChoices{
     func step1(json:String)  {
         var strArray = json.components(separatedBy: "},")
+        
         for i in 0..<strArray.endIndex{
             var part1 = strArray[i]
             step2(json: part1)
