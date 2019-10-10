@@ -10,7 +10,7 @@ import UIKit
 
 class ViewControllerAddQ: UIViewController {
     let choices = Choices()
-    let question = Question()
+    var question = Question()
     
     
     @IBOutlet weak var labelQuestion: UITextField!
@@ -23,8 +23,17 @@ class ViewControllerAddQ: UIViewController {
     var buttonC:Bool! = false
     var buttonD:Bool! = false
     
+    override func viewDidLoad() {
+        
+        super.viewDidLoad()
+        
+        // Do any additional setup after loading the view.
+    }
     
     
+    func setQuestion(q:Question) {
+        self.question = q
+    }
     @IBAction func ansA(_ sender: Any) {
         if (buttonB == false && buttonC == false && buttonD == false){
             buttonA = true

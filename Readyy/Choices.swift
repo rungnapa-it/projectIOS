@@ -8,14 +8,17 @@
 
 import Foundation
 class Choices {
-    var subString = SubString()
-    var id:String = ""
-    var choices1: String = ""
-    var choices2: String = ""
-    var choices3: String = ""
-    var choices4: String = ""
+    private var dict = Dictionary<String,Array<String>>()
+    private var id:String = ""
+    private var choices1: String = ""
+    private var choices2: String = ""
+    private var choices3: String = ""
+    private var choices4: String = ""
+    private var question = Question()
     
-    
+    func setQuestion(q:Question){
+        self.question = q
+    }
     
   init() {
         self.id = "";
@@ -127,11 +130,18 @@ class Choices {
         var strArrayChoices2 = choices2.components(separatedBy: "\"")
         var strArrayChoices3 = choices3.components(separatedBy: "\"")
         var strArrayChoices4 = choices4.components(separatedBy: "\"")
-        setId(questionId: strArrayid[0])
-        setChoices1(choices1: strArrayChoices1[0])
-        setChoices2(choices2: strArrayChoices2[0])
-        setChoices3(choices3: strArrayChoices3[0])
-        setChoices4(choices4:strArrayChoices4[0])
+        let questionId = strArrayid[0]
+        let choices1 = strArrayChoices1[0]
+        let choices2 = strArrayChoices2[0]
+        let choices3 = strArrayChoices3[0]
+        let choices4 = strArrayChoices4[0]
+        addDictionary(id: questionId, choices1: choices1, choices2: choices2, choices3: choices3, choices4: choices4)
+    }
+    
+    func addDictionary(id:String,choices1:String,choices2:String,choices3:String,choices4:String)  {
+        dict[question.getName()] = [choices1,choices2,choices3,choices4]
+        //print("--------\(dict)\n")
+        
     }
     
        

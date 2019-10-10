@@ -8,11 +8,15 @@
 
 import Foundation
 class Question {
-    var id:String
-    var name:String
-    var ans:String
-    var point:Int
-    var questionOrder:Int
+    private var dict = Dictionary<String,Array<String>>()
+    private var id:String
+    private var name:String
+    private var ans:String
+    private var point:Int
+    private var room:String
+    private var questionOrder:Int
+    private var roomOrder:Int
+    
     
     init() {
         self.id = ""
@@ -20,8 +24,21 @@ class Question {
         self.ans = ""
         self.point = 10
         self.questionOrder = 100
+        self.room = ""
+        self.roomOrder = 100
+        
     }
     
+    func setRoom(){
+        self.room = "r\(getRoomOrder())"
+        setRoomOrder()
+    }
+    func setRoomOrder() {
+        self.roomOrder+=1
+    }
+    func getRoomOrder() -> String {
+        return "\(roomOrder)"
+    }
     func setId(){
         self.id = "d\(getQuestionOrder())"
         setQuestionOrder()
@@ -32,7 +49,8 @@ class Question {
     }
     func setName(name:String)  {
         self.name = name
-        //print("Question : \(name)")
+       
+        print("Question : \(name)")
     }
     
     func setAns(ans:String)  {
@@ -49,6 +67,7 @@ class Question {
     }
     
     func getName() -> String {
+        print("getName: \(name)")
         return name
     }
     
@@ -64,10 +83,11 @@ class Question {
         return questionOrder
     }
     func getJSON() -> String {
-        return "[{\"id\":\"\(id)\",\"name\":\"\(name)\",\"ans\":\"\(ans)\",\"point\":\"\(point)\"}]";
+        return "[{\"id\":\"\(id)\",\"name\":\"\(name)\",\"ans\":\"\(ans)\",\"point\":\"\(point)\",\"room\":\"\(room)\"b}]";
     }
     
     func questionJSON(json:String) {
+       
         step1(json: json)
     }
     
@@ -85,9 +105,44 @@ class Question {
         let name = strArray[1]
         let ans = strArray[2]
         let point = strArray[3]
+        let room = strArray[4]
         
-        print("id : \(id) \n name : \(name) \n ans : \(ans) \n point : \(point)")
+        //print("id : \(id) \n name : \(name) \n ans : \(ans) \n point : \(point)")
+        step3(id: id , name :name , ans : ans , point:point)
     
+    }
+    
+    func step3(id:String , name:String , ans:String , point:String)  {
+        var strArrayid = id.components(separatedBy: ":\"")
+        var strArrayName = name.components(separatedBy: ":\"")
+        var strArrayAns = ans.components(separatedBy: ":\"")
+        var strArrayPoint = ans.components(separatedBy: ":\"")
+        let id = strArrayid[1]
+        let name = strArrayName[1]
+        let ans = strArrayAns[1]
+        let point = strArrayPoint[1]
+         //print("id : \(id) \n name : \(name) \n ans : \(ans) \n point : \(point)")
+        step4(id: id , name :name , ans : ans , point:point)
+    }
+    
+    func step4(id:String , name:String , ans:String , point:String)  {
+        var strArrayid = id.components(separatedBy: "\"")
+        var strArrayName = name.components(separatedBy: "\"")
+        var strArrayAns = ans.components(separatedBy: "\"")
+        var strArrayPoint = ans.components(separatedBy: "\"")
+        let id = strArrayid[0]
+        let name = strArrayName[0]
+        let ans = strArrayAns[0]
+        let point = strArrayPoint[0]
+        setName(name: name)
+        
+       //print("id : \(id) \n name : \(name) \n ans : \(ans) \n point : \(point)")
+        addDictionary(id: id , name :name , ans : ans , point:point)
+    }
+    func addDictionary(id:String , name:String , ans:String , point:String)  {
+        dict[id] = [name,ans,point]
+        
+       // print("-------- \(dict)\n")
     }
     
     

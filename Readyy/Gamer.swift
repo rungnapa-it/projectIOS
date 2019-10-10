@@ -9,11 +9,11 @@
 import Foundation
 class Gamer {
 
-    var id:String
-    var name:String
-    var score:Int
-    var high_score:Int
-    var orderId:Int
+    private var id:String
+    private var name:String
+    private var score:Int
+    private var high_score:Int
+    private var orderId:Int
     
     init(name:String) {
         self.id = ""

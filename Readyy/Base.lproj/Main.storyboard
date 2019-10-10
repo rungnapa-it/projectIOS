@@ -455,7 +455,7 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <action selector="Playing:" destination="wwl-IX-mu8" eventType="touchDragInside" id="Ptv-f6-whH"/>
+                                            <action selector="Playing:" destination="wwl-IX-mu8" eventType="touchDragInside" id="v1N-X4-E3i"/>
                                             <segue destination="EAH-V2-pM9" kind="show" id="YI1-OB-Hsj"/>
                                         </connections>
                                     </button>
@@ -533,16 +533,16 @@
             </objects>
             <point key="canvasLocation" x="-733.33333333333337" y="101.78571428571428"/>
         </scene>
-        <!--View Controller-->
+        <!--View Controller Playing-->
         <scene sceneID="tvO-3D-L0R">
             <objects>
-                <viewController id="EAH-V2-pM9" sceneMemberID="viewController">
+                <viewController id="EAH-V2-pM9" customClass="ViewControllerPlaying" customModule="Readyy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vQg-vs-KiA">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DY6-kE-oWZ">
-                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DY6-kE-oWZ">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zwd-hj-nSZ">
                                         <rect key="frame" x="8" y="334" width="398" height="80"/>
@@ -647,10 +647,17 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="fQB-Ar-6KR"/>
                     </view>
+                    <connections>
+                        <outlet property="choices1Button" destination="QdB-FB-fHX" id="1rE-Di-4Dy"/>
+                        <outlet property="choices2Button" destination="zwd-hj-nSZ" id="HY0-KH-OV9"/>
+                        <outlet property="choices3Button" destination="qiH-4h-IWQ" id="XAe-MD-Hsw"/>
+                        <outlet property="choices4Button" destination="24z-1R-Mbf" id="gXy-BT-Zex"/>
+                        <outlet property="questionField" destination="dYR-G7-zTf" id="UPJ-9T-DCF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4B8-Wy-gm2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-170" y="875"/>
+            <point key="canvasLocation" x="-171.01449275362319" y="874.55357142857144"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="2ot-sA-iq3">

@@ -1,28 +1,33 @@
 //
-//  ViewControllerWait.swift
+//  ViewControllerPlaying.swift
 //  Readyy
 //
-//  Created by Milk on 8/10/2562 BE.
+//  Created by Milk on 9/10/2562 BE.
 //  Copyright © 2562 Ratsuda Suwan. All rights reserved.
 //
 
 import UIKit
 
-class ViewControllerWait: UIViewController {
-    let vp = ViewControllerAddQ(nibName: "ViewControllerAddQ", bundle: nil)
-   
+class ViewControllerPlaying: UIViewController {
     
+    let vp = ViewControllerAddQ(nibName: "ViewControllerAddQ", bundle: nil)
+    
+    
+    
+  
+    @IBOutlet weak var questionField: UITextField!
+    @IBOutlet weak var choices1Button: UIButton!
+    
+    @IBOutlet weak var choices4Button: UIButton!
+    @IBOutlet weak var choices3Button: UIButton!
+    @IBOutlet weak var choices2Button: UIButton!
     override func viewDidLoad() {
-        
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        getChoies()
+        getQuestion()
+        ready()
     }
 
-    @IBAction func Playing(_ sender: Any) {
-        //getChoies()
-        //getQuestion()
-    }
+    
     
     func getChoies() {
         
@@ -43,7 +48,8 @@ class ViewControllerWait: UIViewController {
             }
         }
         task.resume()
-    
+        
+        
     }
     
     func getQuestion()  {
@@ -59,13 +65,21 @@ class ViewControllerWait: UIViewController {
                     
                     self.vp.question.questionJSON(json: dataString)
                     //self.setQuestion(q: self.question);
-                    print("data: \(dataString)")
+                    //print("data: \(dataString)")
+                    print("Fun : \(self.vp.question.getName())")
                 }
             }
         }
         task.resume()
         
+        
     }
+    func ready () {
+        
+       
+        self.questionField.text = vp.question.getName()
+    }
+    
     
     /*
     // MARK: - Navigation

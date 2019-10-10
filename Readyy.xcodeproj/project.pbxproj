@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		24474B51234DE855003B3167 /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24474B50234DE855003B3167 /* Room.swift */; };
+		24474B55234E15F9003B3167 /* ViewControllerPlaying.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24474B54234E15F9003B3167 /* ViewControllerPlaying.swift */; };
 		244D90A62348EC8D00DB7CC1 /* Choices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244D90A52348EC8D00DB7CC1 /* Choices.swift */; };
 		244D90A82348EC9A00DB7CC1 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244D90A72348EC9A00DB7CC1 /* Question.swift */; };
 		244D90AA2348ECA600DB7CC1 /* Gamer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244D90A92348ECA600DB7CC1 /* Gamer.swift */; };
@@ -40,6 +42,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		24474B50234DE855003B3167 /* Room.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Room.swift; sourceTree = "<group>"; };
+		24474B54234E15F9003B3167 /* ViewControllerPlaying.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerPlaying.swift; sourceTree = "<group>"; };
 		244D90A52348EC8D00DB7CC1 /* Choices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Choices.swift; sourceTree = "<group>"; };
 		244D90A72348EC9A00DB7CC1 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		244D90A92348ECA600DB7CC1 /* Gamer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gamer.swift; sourceTree = "<group>"; };
@@ -121,6 +125,8 @@
 				244D90A92348ECA600DB7CC1 /* Gamer.swift */,
 				248D5738234C8D8A00DFF1AE /* SubString.swift */,
 				248D573E234C938600DFF1AE /* ViewControllerWait.swift */,
+				24474B50234DE855003B3167 /* Room.swift */,
+				24474B54234E15F9003B3167 /* ViewControllerPlaying.swift */,
 			);
 			path = Readyy;
 			sourceTree = "<group>";
@@ -279,7 +285,9 @@
 				B3339487232A026300F907DA /* ViewController.swift in Sources */,
 				244D90A82348EC9A00DB7CC1 /* Question.swift in Sources */,
 				244D90AA2348ECA600DB7CC1 /* Gamer.swift in Sources */,
+				24474B51234DE855003B3167 /* Room.swift in Sources */,
 				244D90A62348EC8D00DB7CC1 /* Choices.swift in Sources */,
+				24474B55234E15F9003B3167 /* ViewControllerPlaying.swift in Sources */,
 				B3339485232A026300F907DA /* AppDelegate.swift in Sources */,
 				248D573F234C938600DFF1AE /* ViewControllerWait.swift in Sources */,
 			);
