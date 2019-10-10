@@ -24,37 +24,48 @@ class SubStringQuestion {
         let point = strArray[3]
         let room = strArray[4]
         
+        
         //print("id : \(id) \n name : \(name) \n ans : \(ans) \n point : \(point)")
-        step3(id: id , name :name , ans : ans , point:point)
+        step3(id: id , name :name , ans : ans , point:point, room: room)
         
     }
     
-    func step3(id:String , name:String , ans:String , point:String)  {
+    func step3(id:String , name:String , ans:String , point:String , room:String )  {
         var strArrayid = id.components(separatedBy: ":\"")
         var strArrayName = name.components(separatedBy: ":\"")
         var strArrayAns = ans.components(separatedBy: ":\"")
         var strArrayPoint = ans.components(separatedBy: ":\"")
+        var strArrayRoom = room.components(separatedBy: ":\"")
+        
         let id = strArrayid[1]
         let name = strArrayName[1]
         let ans = strArrayAns[1]
         let point = strArrayPoint[1]
+        let room = strArrayRoom[1]
+       
+        
         //print("id : \(id) \n name : \(name) \n ans : \(ans) \n point : \(point)")
-        step4(id: id , name :name , ans : ans , point:point)
+        step4(id: id , name :name , ans : ans , point:point, room: room)
     }
     
-    func step4(id:String , name:String , ans:String , point:String)  {
+    func step4(id:String , name:String , ans:String , point:String , room:String )  {
         var strArrayid = id.components(separatedBy: "\"")
         var strArrayName = name.components(separatedBy: "\"")
         var strArrayAns = ans.components(separatedBy: "\"")
-        var strArrayPoint = ans.components(separatedBy: "\"")
+        var strArrayPoint = point.components(separatedBy: "\"")
+        var strArrayRoom = room.components(separatedBy: "\"")
+        
         let id = strArrayid[0]
         let name = strArrayName[0]
         let ans = strArrayAns[0]
         let point = strArrayPoint[0]
+        let room = strArrayRoom[0]
+        
+        
         
         
         //print("id : \(id) \n name : \(name) \n ans : \(ans) \n point : \(point)")
-        question.addDictionary(id: id , name :name , ans : ans , point:point)
+        question.addDictionary(id: id , name :name , ans : ans , point:point, room: room)
     }
     
     

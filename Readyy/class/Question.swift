@@ -15,7 +15,7 @@ class Question {
     private var point:Int
     private var room:String
     private var questionOrder:Int
-    private var roomOrder:Int
+    
     
     
     init() {
@@ -25,20 +25,18 @@ class Question {
         self.point = 10
         self.questionOrder = 100
         self.room = ""
-        self.roomOrder = 100
+        
         
     }
     
-    func setRoom(){
-        self.room = "r\(getRoomOrder())"
-        setRoomOrder()
+    func setRoom(room:String)  {
+        self.room = room
+        
     }
-    func setRoomOrder() {
-        self.roomOrder+=1
+    func getRoom() -> String {
+        return room
     }
-    func getRoomOrder() -> String {
-        return "\(roomOrder)"
-    }
+   
     func setId(){
         self.id = "d\(getQuestionOrder())"
         setQuestionOrder()
@@ -66,7 +64,6 @@ class Question {
     }
     
     func getName() -> String {
-        print("getName: \(name)")
         return name
     }
     
@@ -81,9 +78,7 @@ class Question {
     func getQuestionOrder() -> Int{
         return questionOrder
     }
-    func getRoom() -> String {
-        return room
-    }
+    
     func getJSON() -> String {
         return "[{\"id\":\"\(id)\",\"name\":\"\(name)\",\"ans\":\"\(ans)\",\"point\":\"\(point)\",\"room\":\"\(room)\"}]";
     }
@@ -94,14 +89,29 @@ class Question {
     }
     
     
-    func addDictionary(id:String , name:String , ans:String , point:String)  {
-       
-        dict[id] = [name,ans,"10"]
+    func addDictionary(id:String , name:String , ans:String , point:String,room:String)  {
+        dict[id] = [name,ans,"10",room]
+        
+        }
         
        // print("-------- \(dict)\n")
-    }
-    func getDictionare() {
+    
+    func getDictionary() {
         print("\(dict)")
+    }
+
+    func getNameIndex(id:String)-> String{
+        
+        var key = ""
+        for (key,value) in dict {
+            print("\(key) \(id)")
+            if (key == id){
+                print(key)
+                break
+            }
+        }
+       
+        return key
     }
     
     

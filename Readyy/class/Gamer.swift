@@ -13,18 +13,42 @@ class Gamer {
     private var name:String
     private var score:Int
     private var high_score:Int
-    private var orderId:Int
+    private var room:String
+    private var status:String
+    private var roomOrder:Int
+     private var orderId:Int
     
     init(name:String) {
         self.id = ""
         self.name = name
         self.score = 0
         self.high_score = 0
+        self.status = ""
+        self.room = ""
+        self.roomOrder = 0
         self.orderId = 100
+        
+    }
+
+    func setStatus(status:String)  {
+        self.status = status
+    }
+    func getStatus() -> String {
+        return status
+    }
+    func setRoom(){
+        self.room = "r\(getRoomOrder())"
+        setRoomOrder()
+    }
+    func setRoomOrder() {
+        self.roomOrder+=1
+    }
+    func getRoomOrder() -> Int {
+        return roomOrder
     }
     
-    func printtest(text:String)  {
-        print("class : \(text)")
+    func getRoom() -> String {
+        return room
     }
     func setId() {
         self.id = "G\(getOrderId())"
@@ -72,7 +96,7 @@ class Gamer {
     }
     
    func getJSON() -> String {
-        return "[{\"id\":\"\(id)\",\"name\":\"\(name)\",\"score\":\"\(score)\",\"high_score\":\"\(high_score)\"}]";
+        return "[{\"id\":\"\(id)\",\"name\":\"\(name)\",\"score\":\"\(score)\",\"high_score\":\"\(high_score)\",\"room\":\"\(room)\"}]";
     }
     
    

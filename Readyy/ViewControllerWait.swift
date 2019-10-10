@@ -14,8 +14,9 @@ class ViewControllerWait: UIViewController {
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        getChoies()
         getQuestion()
+        
+        
 
         // Do any additional setup after loading the view.
     }
@@ -44,6 +45,7 @@ class ViewControllerWait: UIViewController {
             }
         }
         task.resume()
+       
     
     }
     
@@ -65,6 +67,7 @@ class ViewControllerWait: UIViewController {
             }
         }
         task.resume()
+         getChoies()
         
     }
     

@@ -91,9 +91,17 @@ class Choices {
     
     
     func addDictionary(id:String,choices1:String,choices2:String,choices3:String,choices4:String)  {
-        dict[question.getName()] = [choices1,choices2,choices3,choices4]
+        
+        var name = question.getNameIndex(id: id)
+        dict[name] = [choices1,choices2,choices3,choices4]
+      
+        //print("first \(dict.index(forKey: <#T##String#>))")
         //print("--------\(dict)\n")
         
+    }
+    
+    func getDictionary()  {
+        print("\(dict)")
     }
     
        

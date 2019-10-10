@@ -20,14 +20,16 @@ class ViewControllerPlaying: UIViewController {
     override func viewDidLoad() {
         
         ready()
+        question.getDictionary()
+        choices.getDictionary()
     }
     
 
 
     func ready () {
         
-        print("test : \(question.getName())")
-        question.getDictionare()
+       // print("test : \(question.getName())")
+        
     }
 }
 
