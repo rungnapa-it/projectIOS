@@ -9,12 +9,13 @@
 import UIKit
 
 class ViewControllerWait: UIViewController {
-    let vp = ViewControllerAddQ(nibName: "ViewControllerAddQ", bundle: nil)
-   
+    
     
     override func viewDidLoad() {
         
         super.viewDidLoad()
+        getChoies()
+        getQuestion()
 
         // Do any additional setup after loading the view.
     }
@@ -36,7 +37,7 @@ class ViewControllerWait: UIViewController {
                 }
                 if let data = data, let dataString = String(data: data, encoding: .utf8) {
                     
-                    self.vp.choices.choicesJSON(text: dataString)
+                    choices.choicesJSON(text: dataString)
                     //self.setChoices(ch:self.choices)
                     //print("data: \(dataString)")
                 }
@@ -57,9 +58,9 @@ class ViewControllerWait: UIViewController {
                 }
                 if let data = data, let dataString = String(data: data, encoding: .utf8) {
                     
-                    self.vp.question.questionJSON(json: dataString)
+                    question.questionJSON(json: dataString)
                     //self.setQuestion(q: self.question);
-                    print("data: \(dataString)")
+                    //print("data: \(dataString)")
                 }
             }
         }
