@@ -102,6 +102,7 @@ class Choices {
     }
     
     func getDictionary() -> [String:Array<String>] {
+        
         return dict
         
     }
