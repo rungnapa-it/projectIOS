@@ -351,7 +351,7 @@
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="Enter:" destination="BYZ-38-t0r" eventType="touchDragInside" id="wnL-1m-zwO"/>
+                                                    <action selector="Enter:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7ii-z8-S7a"/>
                                                     <segue destination="HgM-D4-H5A" kind="show" id="uSJ-No-BY6"/>
                                                 </connections>
                                             </button>
@@ -455,7 +455,7 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <action selector="Playing:" destination="wwl-IX-mu8" eventType="touchDragInside" id="v1N-X4-E3i"/>
+                                            <action selector="Playing:" destination="wwl-IX-mu8" eventType="touchUpInside" id="kVX-jE-zBM"/>
                                             <segue destination="EAH-V2-pM9" kind="show" id="YI1-OB-Hsj"/>
                                         </connections>
                                     </button>
@@ -557,7 +557,7 @@
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <action selector="setChoices2:" destination="EAH-V2-pM9" eventType="touchDragInside" id="qN4-ee-S9N"/>
+                                            <action selector="setChoices2:" destination="EAH-V2-pM9" eventType="touchUpInside" id="2lQ-CC-2lP"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qiH-4h-IWQ">
@@ -573,7 +573,7 @@
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <action selector="setChoices3:" destination="EAH-V2-pM9" eventType="touchDragOutside" id="p11-4w-YSg"/>
+                                            <action selector="setChoices3:" destination="EAH-V2-pM9" eventType="touchUpInside" id="jzo-cS-Wp5"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="24z-1R-Mbf">
@@ -589,7 +589,7 @@
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <action selector="setChoices4:" destination="EAH-V2-pM9" eventType="touchDragInside" id="Frk-Pg-lpo"/>
+                                            <action selector="setChoices4:" destination="EAH-V2-pM9" eventType="touchUpInside" id="lML-XN-pmc"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ktM-Km-Xuf">
@@ -618,7 +618,7 @@
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <action selector="setChoices1:" destination="EAH-V2-pM9" eventType="touchDragInside" id="l8D-KQ-bBe"/>
+                                            <action selector="setchoices1:" destination="EAH-V2-pM9" eventType="touchUpInside" id="fU9-Vy-v32"/>
                                         </connections>
                                     </button>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="253" verticalHuggingPriority="269" verticalCompressionResistancePriority="757" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dYR-G7-zTf">
@@ -757,6 +757,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="c6w-Ed-SAq"/>
+        <segue reference="a01-De-qUu"/>
+        <segue reference="Wh5-AQ-j93"/>
     </inferredMetricsTieBreakers>
 </document>

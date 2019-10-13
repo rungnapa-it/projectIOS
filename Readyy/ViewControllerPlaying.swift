@@ -31,14 +31,17 @@ class ViewControllerPlaying: UIViewController {
         choices.getDictionary()
         
     }
-    @IBAction func setChoices1(_ sender: Any) {
+    @IBAction func setchoices1(_ sender: Any) {
         buttonchoices1 = true
         ready()
     }
+  
+   
     @IBAction func setChoices2(_ sender: Any) {
         buttonchoices2 = true
         ready()
     }
+    
     @IBAction func setChoices3(_ sender: Any) {
         buttonchoices3 = true
         ready()
@@ -47,6 +50,7 @@ class ViewControllerPlaying: UIViewController {
         buttonchoices4 = true
         ready()
     }
+    
     
 
     @IBAction func setButton(_ sender: Any) {
