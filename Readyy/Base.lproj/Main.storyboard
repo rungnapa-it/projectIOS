@@ -626,6 +626,20 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="score :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oIJ-2O-8qc">
+                                        <rect key="frame" x="268" y="19" width="53" height="57"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h8A-7M-w7E">
+                                        <rect key="frame" x="329" y="37" width="11" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.97664827109999997" green="0.73768013720000003" blue="0.74889808889999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -672,6 +686,7 @@
                         <outlet property="choices3Button" destination="qiH-4h-IWQ" id="XAe-MD-Hsw"/>
                         <outlet property="choices4Button" destination="24z-1R-Mbf" id="gXy-BT-Zex"/>
                         <outlet property="questionField" destination="dYR-G7-zTf" id="UPJ-9T-DCF"/>
+                        <outlet property="score" destination="h8A-7M-w7E" id="aRY-CJ-jFy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4B8-Wy-gm2" userLabel="First Responder" sceneMemberID="firstResponder"/>

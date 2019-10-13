@@ -17,6 +17,7 @@ class ViewControllerPlaying: UIViewController {
     var buttonchoices4 = false
    
     
+    @IBOutlet weak var score: UILabel!
     @IBOutlet weak var questionField: UITextField!
     @IBOutlet weak var choices1Button: UIButton!
     
@@ -24,6 +25,7 @@ class ViewControllerPlaying: UIViewController {
     @IBOutlet weak var choices3Button: UIButton!
     @IBOutlet weak var choices2Button: UIButton!
     override func viewDidLoad() {
+        
         dictionary = choices.getDictionary()
         buttonchoices1 = true
         ready()
@@ -33,21 +35,33 @@ class ViewControllerPlaying: UIViewController {
     }
     @IBAction func setchoices1(_ sender: Any) {
         buttonchoices1 = true
+        let choicesTitle = (sender as AnyObject).title(for: .normal)!
+        let totalScore  = question.getScore(qu: questionField.text!, ans: choicesTitle)+Int(score.text!)!
+        self.score.text = "\(totalScore)"
         ready()
     }
   
    
     @IBAction func setChoices2(_ sender: Any) {
         buttonchoices2 = true
+        let choicesTitle = (sender as AnyObject).title(for: .normal)!
+        let totalScore  = question.getScore(qu: questionField.text!, ans: choicesTitle)+Int(score.text!)!
+        self.score.text = "\(totalScore)"
         ready()
     }
     
     @IBAction func setChoices3(_ sender: Any) {
         buttonchoices3 = true
+        let choicesTitle = (sender as AnyObject).title(for: .normal)!
+        let totalScore  = question.getScore(qu: questionField.text!, ans: choicesTitle)+Int(score.text!)!
+        self.score.text = "\(totalScore)"
         ready()
     }
     @IBAction func setChoices4(_ sender: Any) {
         buttonchoices4 = true
+        let choicesTitle = (sender as AnyObject).title(for: .normal)!
+        let totalScore  = question.getScore(qu: questionField.text!, ans: choicesTitle)+Int(score.text!)!
+        self.score.text = "\(totalScore)"
         ready()
     }
     

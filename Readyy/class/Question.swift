@@ -116,6 +116,23 @@ class Question {
         return nameQuestion
     }
     
+    func getScore(qu:String , ans:String) -> Int {
+        var k = ""
+        for (key , value ) in dict{
+            for (v) in value{
+                if (v == qu){
+                    k = key
+                    break
+                }
+            }
+        }
+        let value:Array<String> = dict[k]!
+        if (ans == value[1]){
+            return 1
+        }
+        return 0
+    }
+    
     
     
     
