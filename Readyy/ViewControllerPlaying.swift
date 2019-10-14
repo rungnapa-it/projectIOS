@@ -17,26 +17,35 @@ class ViewControllerPlaying: UIViewController {
     var buttonchoices4 = false
    
     
+    @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var score: UILabel!
-    @IBOutlet weak var questionField: UITextField!
+    
     @IBOutlet weak var choices1Button: UIButton!
     
     @IBOutlet weak var choices4Button: UIButton!
     @IBOutlet weak var choices3Button: UIButton!
     @IBOutlet weak var choices2Button: UIButton!
     override func viewDidLoad() {
-        
+       
         dictionary = choices.getDictionary()
         buttonchoices1 = true
         ready()
         question.getDictionary()
         choices.getDictionary()
+        questionLabel.lineBreakMode = .byWordWrapping
+        questionLabel.numberOfLines = 0;
+       
         
     }
     @IBAction func setchoices1(_ sender: Any) {
         buttonchoices1 = true
         let choicesTitle = (sender as AnyObject).title(for: .normal)!
-        let totalScore  = question.getScore(qu: questionField.text!, ans: choicesTitle)+Int(score.text!)!
+        let totalScore  = question.getScore(qu: questionLabel.text!, ans: choicesTitle)+Int(score.text!)!
+        if (question.getScore(qu: questionLabel.text!, ans: choicesTitle ) == 1){
+            score.backgroundColor = UIColor.green
+        }else{
+            score.backgroundColor = UIColor.red
+        }
         self.score.text = "\(totalScore)"
         ready()
     }
@@ -45,7 +54,12 @@ class ViewControllerPlaying: UIViewController {
     @IBAction func setChoices2(_ sender: Any) {
         buttonchoices2 = true
         let choicesTitle = (sender as AnyObject).title(for: .normal)!
-        let totalScore  = question.getScore(qu: questionField.text!, ans: choicesTitle)+Int(score.text!)!
+        let totalScore  = question.getScore(qu: questionLabel.text!, ans: choicesTitle)+Int(score.text!)!
+        if (question.getScore(qu: questionLabel.text!, ans: choicesTitle ) == 1){
+            score.backgroundColor = UIColor.green
+        }else{
+            score.backgroundColor = UIColor.red
+        }
         self.score.text = "\(totalScore)"
         ready()
     }
@@ -53,14 +67,24 @@ class ViewControllerPlaying: UIViewController {
     @IBAction func setChoices3(_ sender: Any) {
         buttonchoices3 = true
         let choicesTitle = (sender as AnyObject).title(for: .normal)!
-        let totalScore  = question.getScore(qu: questionField.text!, ans: choicesTitle)+Int(score.text!)!
+        let totalScore  = question.getScore(qu: questionLabel.text!, ans: choicesTitle)+Int(score.text!)!
+        if (question.getScore(qu: questionLabel.text!, ans: choicesTitle ) == 1){
+            score.backgroundColor = UIColor.green
+        }else{
+            score.backgroundColor = UIColor.red
+        }
         self.score.text = "\(totalScore)"
         ready()
     }
     @IBAction func setChoices4(_ sender: Any) {
         buttonchoices4 = true
         let choicesTitle = (sender as AnyObject).title(for: .normal)!
-        let totalScore  = question.getScore(qu: questionField.text!, ans: choicesTitle)+Int(score.text!)!
+        let totalScore  = question.getScore(qu: questionLabel.text!, ans: choicesTitle)+Int(score.text!)!
+        if (question.getScore(qu: questionLabel.text!, ans: choicesTitle ) == 1){
+            score.backgroundColor = UIColor.green
+        }else{
+            score.backgroundColor = UIColor.red
+        }
         self.score.text = "\(totalScore)"
         ready()
     }
@@ -81,7 +105,7 @@ class ViewControllerPlaying: UIViewController {
             buttonchoices4 = false
             var array = [String]()
             var id = accessToDictionary(dict: dictionary)
-            self.questionField.text = question.getNameIndex(id: id)
+            self.questionLabel.text = question.getNameIndex(id: id)
             
             for (key , value) in dictionary {
                 if (key == id){
