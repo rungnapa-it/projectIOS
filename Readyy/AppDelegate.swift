@@ -12,6 +12,7 @@ var choices = Choices()
 var gamer = Gamer(name: "")
 var subStringQuestion = SubStringQuestion()
 var subStringChoices = SubStringChoices()
+var subStringGamer = SubStringGamer()
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 

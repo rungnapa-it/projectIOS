@@ -41,7 +41,7 @@ class SubStringQuestion {
         let name = strArrayName[1]
         let ans = strArrayAns[1]
         let point = strArrayPoint[1]
-        let room = strArrayRoom[1]
+        //let room = strArrayRoom[1]
        
         
         //print("id : \(id) \n name : \(name) \n ans : \(ans) \n point : \(point)")

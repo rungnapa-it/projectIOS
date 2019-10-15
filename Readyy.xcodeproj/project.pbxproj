@@ -22,6 +22,7 @@
 		B333948F232A026400F907DA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B333948D232A026400F907DA /* LaunchScreen.storyboard */; };
 		B333949A232A026400F907DA /* ReadyyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3339499232A026400F907DA /* ReadyyTests.swift */; };
 		B33394A5232A026400F907DA /* ReadyyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33394A4232A026400F907DA /* ReadyyUITests.swift */; };
+		B36140F32355DD5D00F42065 /* SubStringGamer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36140F22355DD5D00F42065 /* SubStringGamer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		B33394A0232A026400F907DA /* ReadyyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReadyyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B33394A4232A026400F907DA /* ReadyyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadyyUITests.swift; sourceTree = "<group>"; };
 		B33394A6232A026400F907DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B36140F22355DD5D00F42065 /* SubStringGamer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubStringGamer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				244D90A72348EC9A00DB7CC1 /* Question.swift */,
 				244D90A52348EC8D00DB7CC1 /* Choices.swift */,
 				2422BBEB234F6F9E001EADFA /* SubStringChoices.swift */,
+				B36140F22355DD5D00F42065 /* SubStringGamer.swift */,
 			);
 			path = class;
 			sourceTree = "<group>";
@@ -305,6 +308,7 @@
 				24474B55234E15F9003B3167 /* ViewControllerPlaying.swift in Sources */,
 				B3339485232A026300F907DA /* AppDelegate.swift in Sources */,
 				2422BBEC234F6F9E001EADFA /* SubStringChoices.swift in Sources */,
+				B36140F32355DD5D00F42065 /* SubStringGamer.swift in Sources */,
 				248D573F234C938600DFF1AE /* ViewControllerWait.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

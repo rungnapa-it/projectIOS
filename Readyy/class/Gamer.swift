@@ -4,11 +4,12 @@
 //
 //  Created by Milk on 5/10/2562 BE.
 //  Copyright © 2562 Ratsuda Suwan. All rights reserved.
-//
+
 
 import Foundation
 class Gamer {
-
+    
+    private var dict = Dictionary<String,Array<String>>()
     private var id:String
     private var name:String
     private var score:Int
@@ -16,7 +17,7 @@ class Gamer {
     private var room:String
     private var status:String
     private var roomOrder:Int
-     private var orderId:Int
+    private var orderId:Int
     
     init(name:String) {
         self.id = ""
@@ -29,7 +30,7 @@ class Gamer {
         self.orderId = 100
         
     }
-
+    
     func setStatus(status:String)  {
         self.status = status
     }
@@ -52,9 +53,9 @@ class Gamer {
     }
     func setId() {
         self.id = "G\(getOrderId())"
-       setOrderId()
-
-   }
+        setOrderId()
+        
+    }
     
     func setOrderId() {
         self.orderId+=1
@@ -64,7 +65,7 @@ class Gamer {
         self.name = name
         print(name)
         //print(gamerJSON())
-       
+        
     }
     
     func setScore(score:Int)  {
@@ -95,12 +96,28 @@ class Gamer {
         return orderId
     }
     
-   func getJSON() -> String {
+    func getJSON() -> String {
         return "[{\"id\":\"\(id)\",\"name\":\"\(name)\",\"score\":\"\(score)\",\"high_score\":\"\(high_score)\",\"room\":\"\(room)\"}]";
     }
     
-   
+    func gamerJSON(json:String) {
+        subStringGamer.step1(json: json)
+    }
+    
+    func addDictionary(id:String , name:String , score:String , high_score:String ,room:String, status:String)  {
+        dict[id] = [name,score,high_score,room,status]
+        
+    }
+    
+    
     
 }
+
+
+
+
+
+
+
 
 
