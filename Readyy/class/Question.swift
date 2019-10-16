@@ -12,7 +12,6 @@ class Question {
     private var id:String
     private var name:String
     private var ans:String
-    private var point:Int
     private var room:String
     private var questionOrder:Int
     
@@ -22,8 +21,8 @@ class Question {
         self.id = ""
         self.name = ""
         self.ans = ""
-        self.point = 10
-        self.questionOrder = 100
+        
+        self.questionOrder = 222
         self.room = ""
         
         
@@ -38,7 +37,7 @@ class Question {
     }
    
     func setId(){
-        self.id = "d\(getQuestionOrder())"
+        self.id = "Q\(getQuestionOrder())"
         setQuestionOrder()
     }
     
@@ -55,9 +54,7 @@ class Question {
         //print("Ans: \(ans)")
     }
     
-    func setPoint(point:Int){
-        self.point = point
-    }
+   
     
     func getId() -> String {
         return id
@@ -71,16 +68,13 @@ class Question {
         return ans
     }
     
-    func getPoin() -> Int{
-        return point
-    }
-    
+   
     func getQuestionOrder() -> Int{
         return questionOrder
     }
     
-    func getJSON() -> String {
-        return "[{\"id\":\"\(id)\",\"name\":\"\(name)\",\"ans\":\"\(ans)\",\"point\":\"\(point)\",\"room\":\"\(room)\"}]";
+    func getJSON(id:String,name:String,ans:String,room:String) -> String {
+        return "[{\"id\":\"\(id)\",\"name\":\"\(name)\",\"ans\":\"\(ans)\",\"room\":\"\(room)\"}]";
     }
     
     func questionJSON(json:String) {
@@ -89,15 +83,16 @@ class Question {
     }
     
     
-    func addDictionary(id:String , name:String , ans:String , point:String,room:String)  {
-        dict[id] = [name,ans,"10",room]
+    func addDictionary(id:String , name:String , ans:String , room:String)  {
+        dict[id] = [name,ans,room]
         
         }
         
        // print("-------- \(dict)\n")
     
-    func getDictionary() {
-       // print("\(dict)")
+    func getDictionary() -> [String:Array<String>]{
+        return dict
+       
     }
 
     func getNameIndex(id:String) -> String{
@@ -133,6 +128,15 @@ class Question {
         return 0
     }
     
+    func DictionaryQuestion()  {
+        for (key,value) in dict{
+            postQuestion(question:getJSON(id: key,name: value[0],ans: value[1],room: value[2]))
+        }
+    }
+    
+    func postQuestion(question:String)  {
+        
+    }
     
     
     

@@ -16,17 +16,32 @@ class ViewControllerPlaying: UIViewController {
     var buttonchoices3 = false
     var buttonchoices4 = false
    
-    
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var score: UILabel!
-    
     @IBOutlet weak var choices1Button: UIButton!
-    
     @IBOutlet weak var choices4Button: UIButton!
     @IBOutlet weak var choices3Button: UIButton!
     @IBOutlet weak var choices2Button: UIButton!
+    
+    @IBOutlet weak var timeLabel: UILabel!
+    var timer = Timer()
+    var isTimeRuning = false
+    var seconds = 60
+    
+    func runTimer() {
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self,   selector: (#selector(self.updateTimer)), userInfo: nil, repeats: true)
+    }
+    @objc func updateTimer() {
+        if (seconds != 0){
+            seconds -= 1     //This will decrement(count down)the seconds.
+            timeLabel.text = "\(seconds)" //This will update the label.
+        }
+    }
+    
     override func viewDidLoad() {
-       
+        
+        runTimer()
+        
         dictionary = choices.getDictionary()
         buttonchoices1 = true
         ready()
@@ -96,8 +111,9 @@ class ViewControllerPlaying: UIViewController {
         ready()
         
     }
-    
+    // ลูปคำถามและคำตอบถ้ามีการกดเลือกจะเปลี่ยนตัวถาม 
     func ready () {
+       
         while (dictionary.count != 0 && buttonchoices1 == true || buttonchoices2 == true || buttonchoices3 == true || buttonchoices4 == true ){
            buttonchoices1 = false
             buttonchoices2 = false
