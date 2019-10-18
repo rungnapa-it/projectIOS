@@ -96,7 +96,7 @@ class Gamer {
         return orderId
     }
     
-    func getJSON() -> String {
+    func getJSON(id:String,name:String,score:String,high_score:String,room:String) -> String {
         return "[{\"id\":\"\(id)\",\"name\":\"\(name)\",\"score\":\"\(score)\",\"high_score\":\"\(high_score)\",\"room\":\"\(room)\"}]";
     }
     
@@ -107,6 +107,12 @@ class Gamer {
     func addDictionary(id:String , name:String , score:String , high_score:String ,room:String, status:String)  {
         dict[id] = [name,score,high_score,room,status]
         
+    }
+    
+    func DictionaryGamer()  {
+        for(key,value) in dict{
+            getJSON(id: key, name: value[0], score: value[1], high_score: value[2], room: value[3])
+        }
     }
     
     

@@ -9,9 +9,8 @@
 import UIKit
 
 class ViewControllerAddQ: UIViewController {
-    
-    
-    
+    var ans:String = ""
+
     @IBOutlet weak var labelQuestion: UITextField!
     @IBOutlet weak var labelChoices1: UITextField!
     @IBOutlet weak var labelChoices2: UITextField!
@@ -34,7 +33,8 @@ class ViewControllerAddQ: UIViewController {
     @IBAction func ansA(_ sender: Any) {
         if (buttonB == false && buttonC == false && buttonD == false){
             buttonA = true
-            question.setAns(ans: labelChoices1.text!)
+            ans = labelChoices1.text!
+            
             
         }
         
@@ -73,13 +73,11 @@ class ViewControllerAddQ: UIViewController {
         let c2:String = labelChoices2.text!
         let c3:String = labelChoices3.text!
         let c4:String = laberChoices4.text!
-        question.setName(name: q)
-        choices.setChoices1(choices1: c1)
-        choices.setChoices2(choices2: c2)
-        choices.setChoices3(choices3: c3)
-        choices.setChoices4(choices4: c4)
-        //print(question.questionJSON())
-        //print(choices.getJSON())
+        
+        choices.addDictionary(id: question.getId(), choices1: c1, choices2: c2, choices3: c3, choices4: c4)
+        question.addDictionary(id: question.getId(), name: q, ans: ans, room:"000" )
+        question.DictionaryQuestion()
+        
         
         
         

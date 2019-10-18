@@ -8,7 +8,7 @@
 
 import Foundation
 class Choices {
-    private var dict = Dictionary<String,Array<String>>()
+    private var dictChoices = Dictionary<String,Array<String>>()
     private var id:String = ""
     private var choices1: String = ""
     private var choices2: String = ""
@@ -78,7 +78,7 @@ class Choices {
     }
     
     
-    func getJSON() -> String {
+    func getJSON(id:String,choices1:String,choices2:String,choices3:String,choices4:String) -> String {
         return "[{\"id\":\"\(id)\",\"choices1\":\"\(choices1)\",\"choices2\":\"\(choices2)\",\"choices3\":\"\(choices3)\",\"choices4\":\"\(choices4)\"}]";
     }
     
@@ -92,20 +92,24 @@ class Choices {
     
     func addDictionary(id:String,choices1:String,choices2:String,choices3:String,choices4:String)  {
 
-        dict[id] = [choices1,choices2,choices3,choices4]
-        
-        //print(dict)
-      
-        //print("first \(dict.index(forKey: <#T##String#>))")
-        //print("--------\(dict)\n")
+        dictChoices[id] = [choices1,choices2,choices3,choices4]
         
     }
     
     func getDictionary() -> [String:Array<String>] {
         
-        return dict
+        return dictChoices
         
     }
+    
+    
+    func DictionaryChoices()  {
+        for (key , value) in dictChoices{
+            getJSON(id: key, choices1: value[0], choices2: value[1], choices3: value[2], choices4: value[3])
+            
+        }
+    }
+    
     
        
     
