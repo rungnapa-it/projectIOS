@@ -10,10 +10,11 @@ import UIKit
 
 class ViewControllerWait: UIViewController {
     
-    @IBOutlet weak var pinRoom: UITextField!
-    @IBOutlet weak var keyRoom: UITextField!
-    @IBOutlet weak var numOfPlayer: UITextField!
-    @IBOutlet weak var showNamePlayer: UITextView!
+    
+    @IBOutlet weak var pinRoom: UILabel!
+    @IBOutlet weak var nameKey: UILabel!
+    @IBOutlet weak var numOfPlayers: UILabel!
+    @IBOutlet weak var showNamePlayers: UIView!
     
     
     override func viewDidLoad() {
@@ -21,10 +22,13 @@ class ViewControllerWait: UIViewController {
         super.viewDidLoad()
         getQuestion()
         getGamer()
+       // showNamePlayers.text = "\(gamer.getName())"
+        //showNamePlayers.text = "\(gamer.getName())"
         
         
         // Do any additional setup after loading the view.
     }
+    
     
     @IBAction func Playing(_ sender: Any) {
         //getChoies()
