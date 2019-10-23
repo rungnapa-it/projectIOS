@@ -23,65 +23,65 @@ class SubStringGamer {
         let score = strArray[2]
         let high_score = strArray[3]
         let room = strArray[4]
-        let status = strArray[5]
+        
         
         
         //print("id : \(id) \n name : \(name) \n score : \(score) \n high_score : \(high_score) \n room : \(room) \n status : \(status)")
-        step3(id: id , name :name , score: score, high_score: high_score, room: room, status: status)
+        step3(id: id , name :name , score: score, high_score: high_score, room: room)
         
     }
     
-    func step3(id:String , name:String , score:String , high_score:String , room:String, status:String )  {
+    func step3(id:String , name:String , score:String , high_score:String , room:String)  {
         var strArrayid = id.components(separatedBy: ":\"")
         var strArrayName = name.components(separatedBy: ":\"")
         var strArrayScore = score.components(separatedBy: ":\"")
         var strArrayHighScore = high_score.components(separatedBy: ":\"")
         var strArrayRoom = room.components(separatedBy: ":\"")
-        var strArrayStatus = status.components(separatedBy: ":\"")
+       
         
         let id = strArrayid[1]
         let name = strArrayName[1]
         let score = strArrayScore[0]
         let high_score = strArrayHighScore[0]
         let room = strArrayRoom[1]
-        let status = strArrayStatus[1]
+       
         
         
         //print("id : \(id) \n name : \(name) \n score : \(score) \n high_score : \(high_score) \n room : \(room) \n status : \(status)")
-        step4(id: id , name :name , score: score, high_score: high_score, room: room, status: status)
+        step4(id: id , name :name , score: score, high_score: high_score, room: room)
     }
     
     
-    func step4(id: String , name:String , score:String , high_score:String , room:String, status:String)  {
+    func step4(id: String , name:String , score:String , high_score:String , room:String)  {
         var strArrayid = id.components(separatedBy: "\"")
         var strArrayName = name.components(separatedBy: "\"")
         var strArrayScore = score.components(separatedBy: "\"")
         var strArrayHighScore = high_score.components(separatedBy: "\"")
         var strArrayRoom = room.components(separatedBy: "\"")
-        var strArrayStatus = status.components(separatedBy: "\"")
+     
         
         let id = strArrayid[0]
         let name = strArrayName[0]
         let score = strArrayScore[2]
         let high_score = strArrayHighScore[2]
         let room = strArrayRoom[0]
-        let status = strArrayStatus[0]
+        
         
         
         //print("id : \(id) \n name : \(name) \n score : \(score) \n high_score : \(high_score) \n room : \(room) \n status : \(status)")
-        step5(id: id , name :name , score: score, high_score: high_score, room: room, status: status)
+        step5(id: id , name :name , score: score, high_score: high_score, room: room)
         //gamer.addDictionary(id: id , name :name , score: score, high_score: high_score, room: room, status: status)
     }
     
-    func step5(id: String , name:String , score:String , high_score:String , room:String, status:String) {
+    func step5(id: String , name:String , score:String , high_score:String , room:String) {
         var strArrayScore = score.components(separatedBy: ":")
         var strArrayHighScore = high_score.components(separatedBy: ":")
         
         let score = strArrayScore[1]
         let high_score = strArrayHighScore[1]
         
-        print("id : \(id) \n name : \(name) \n score : \(score) \n high_score : \(high_score) \n room : \(room) \n status : \(status)")
-        gamer.addDictionary(id: id , name :name , score: score, high_score: high_score, room: room, status: status)
+        print("id : \(id) \n name : \(name) \n score : \(score) \n high_score : \(high_score) \n room : \(room)")
+        gamer.addDictionary(id: id , name :name , score: score, high_score: high_score, room: room)
         
     }
     

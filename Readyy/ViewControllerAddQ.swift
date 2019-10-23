@@ -15,7 +15,7 @@ class ViewControllerAddQ: UIViewController {
     @IBOutlet weak var labelChoices1: UITextField!
     @IBOutlet weak var labelChoices2: UITextField!
     @IBOutlet weak var labelChoices3: UITextField!
-    @IBOutlet weak var laberChoices4: UITextField!
+    @IBOutlet weak var labelChoices4: UITextField!
     var buttonA:Bool! = false
     var buttonB:Bool! = false
     var buttonC:Bool! = false
@@ -43,19 +43,20 @@ class ViewControllerAddQ: UIViewController {
         
         if (buttonA == false && buttonC == false && buttonD == false){
             buttonB = true
-            question.setAns(ans: labelChoices2.text!)
+            ans = labelChoices2.text!
         }
     }
     @IBAction func ansC(_ sender: Any) {
         if (buttonA == false && buttonB == false && buttonD == false ){
             buttonC = true
-            question.setAns(ans: labelChoices3.text!)
+            ans = labelChoices3.text!
         }
     }
     @IBAction func ansD(_ sender: Any) {
         if (buttonA == false && buttonB == false && buttonC == false){
             buttonD = false
-            question.setAns(ans: laberChoices4.text!)
+            ans = labelChoices4.text!
+           
         }
     }
     
@@ -72,7 +73,7 @@ class ViewControllerAddQ: UIViewController {
         let c1:String = labelChoices1.text!
         let c2:String = labelChoices2.text!
         let c3:String = labelChoices3.text!
-        let c4:String = laberChoices4.text!
+        let c4:String = labelChoices4.text!
         
         choices.addDictionary(id: question.getId(), choices1: c1, choices2: c2, choices3: c3, choices4: c4)
         question.addDictionary(id: question.getId(), name: q, ans: ans, room:"000" )

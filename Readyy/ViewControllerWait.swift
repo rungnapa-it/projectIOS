@@ -20,7 +20,7 @@ class ViewControllerWait: UIViewController {
         
         super.viewDidLoad()
         getQuestion()
-        getGamer()
+        
         
         
         // Do any additional setup after loading the view.
@@ -75,26 +75,7 @@ class ViewControllerWait: UIViewController {
         
     }
     
-    func getGamer() {
-        
-        let url = URL(string: "http://localhost:8081/gamer")!
-        let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
-            if let error = error {
-                print("error: \(error)")
-            } else {
-                if (response as? HTTPURLResponse) != nil {
-                    //print("statusCode: \(response.statusCode)")
-                }
-                if let data = data, let dataString = String(data: data, encoding: .utf8) {
-                    
-                    gamer.gamerJSON(json: dataString)
-                    
-                    //self.setChoices(ch:self.choices)
-                    //print("dataChoices: \(dataString)")
-                }
-            }
-        }
-        task.resume()
+    
         
         
         /*
@@ -107,7 +88,7 @@ class ViewControllerWait: UIViewController {
          }
          */
         
-    }
+    
     
 }
 
