@@ -23,19 +23,16 @@ class ViewControllerWait: UIViewController {
         super.viewDidLoad()
         
         getQuestion()
-<<<<<<< HEAD
-        getGamer()
+
+        
         showName(dict: gamer.getDictionaryGamer())
         accessToDictionary(dict: gamer.getDictionaryGamer())
         
 //
         
-    
-=======
+
         
->>>>>>> 7417687c8896a92b3428270aa4e13345a71882d9
-        
-        
+
         // Do any additional setup after loading the view.
 }
     

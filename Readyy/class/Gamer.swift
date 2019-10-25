@@ -111,7 +111,7 @@ class Gamer {
             getJSON(id: key, name: value[0], score: value[1], high_score: value[2], room: value[3])
         }
     }
-<<<<<<< HEAD
+
     
     func getDictionaryGamer() -> [String:Array<String>] {
         
@@ -138,7 +138,6 @@ class Gamer {
     
    
     
-=======
     func isName(name:String) -> Bool {
         var bool = false
         for (key,value ) in dict{
@@ -151,7 +150,6 @@ class Gamer {
         
         return bool
     }
->>>>>>> 7417687c8896a92b3428270aa4e13345a71882d9
     
     
 }
