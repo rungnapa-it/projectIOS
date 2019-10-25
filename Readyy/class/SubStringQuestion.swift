@@ -35,7 +35,9 @@ class SubStringQuestion {
         var strArrayName = name.components(separatedBy: ":\"")
         var strArrayAns = ans.components(separatedBy: ":\"")
         var strArrayRoom = room.components(separatedBy: ":\"")
+
        
+
         let id = strArrayid[1]
         let name = strArrayName[1]
         let ans = strArrayAns[1]

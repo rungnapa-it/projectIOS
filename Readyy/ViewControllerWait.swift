@@ -10,21 +10,32 @@ import UIKit
 
 class ViewControllerWait: UIViewController {
     
-    @IBOutlet weak var pinRoom: UITextField!
-    @IBOutlet weak var keyRoom: UITextField!
-    @IBOutlet weak var numOfPlayer: UITextField!
-    @IBOutlet weak var showNamePlayer: UITextView!
+ 
+    @IBOutlet weak var pinRoom: UILabel!
+    @IBOutlet weak var nameKey: UILabel!
+    @IBOutlet weak var numOfPlayers: UILabel!
+    @IBOutlet weak var showNamePlayers: UITextView!
+    
     
     
     override func viewDidLoad() {
         
         super.viewDidLoad()
+        
         getQuestion()
+
         
+        showName(dict: gamer.getDictionaryGamer())
+        accessToDictionary(dict: gamer.getDictionaryGamer())
         
+//
         
+
+        
+
         // Do any additional setup after loading the view.
-    }
+}
+    
     
     @IBAction func Playing(_ sender: Any) {
         //getChoies()
@@ -88,6 +99,43 @@ class ViewControllerWait: UIViewController {
          }
          */
         
+    
+    
+    func showName(dict:[String:Array<String>]) {
+        var array = [String]()
+        let id = accessToDictionary(dict: dict)
+        self.showNamePlayers.text = gamer.getNamePlayersIndex(id: id)
+        print(dict.isEmpty)
+        while (dict.count != 0) {
+            for (key , value) in dict {
+                if (key == id){
+                    for (v) in value{
+                        array.append(v)
+                        print("AictionaryName : \(dict)")
+                        print("ArrayName : \(array)")
+                        
+                    }
+                }
+                
+                
+        }
+       
+    }
+
+    }
+    
+    func accessToDictionary(dict:[String:Array<String>]) -> String {
+        var namePlayers = ""
+        for (key, value) in dict{
+            namePlayers = key
+            print("Eiei: \(namePlayers)")
+            break
+        }
+        return namePlayers
+        
+    }
+    
+
     
     
 }

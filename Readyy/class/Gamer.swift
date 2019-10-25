@@ -111,6 +111,33 @@ class Gamer {
             getJSON(id: key, name: value[0], score: value[1], high_score: value[2], room: value[3])
         }
     }
+
+    
+    func getDictionaryGamer() -> [String:Array<String>] {
+        
+        return dict
+        
+    }
+    
+    func getNamePlayersIndex(id:String) -> String{
+    
+        var namePlayers = ""
+        for (key,value) in dict {
+            if (key == id){
+                for (name) in value{
+                    namePlayers = name
+                    break
+                }
+                
+            }
+        }
+            return namePlayers
+    }
+    
+
+    
+   
+    
     func isName(name:String) -> Bool {
         var bool = false
         for (key,value ) in dict{
