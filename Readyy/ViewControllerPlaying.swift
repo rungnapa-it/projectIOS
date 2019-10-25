@@ -151,7 +151,6 @@ class ViewControllerPlaying: UIViewController {
         
     }
         
-    
         
     func accessToDictionary(dict:[String:Array<String>]) -> String {
         var keyQuestion = ""

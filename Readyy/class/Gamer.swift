@@ -115,6 +115,28 @@ class Gamer {
         }
     }
     
+    func getDictionaryGamer() -> [String:Array<String>] {
+        
+        return dict
+        
+    }
+    
+    func getNamePlayersIndex(id:String) -> String{
+    
+        var namePlayers = ""
+        for (key,value) in dict {
+            if (key == id){
+                for (name) in value{
+                    namePlayers = name
+                    break
+                }
+                
+            }
+        }
+            return namePlayers
+    }
+    
+
     
    
     
