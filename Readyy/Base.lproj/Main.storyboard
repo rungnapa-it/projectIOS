@@ -794,11 +794,9 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-<<<<<<< HEAD
-        <segue reference="a01-De-qUu"/>
-        <segue reference="Wh5-AQ-j93"/>
-=======
+
+
         <segue reference="c6w-Ed-SAq"/>
->>>>>>> 7417687c8896a92b3428270aa4e13345a71882d9
+
     </inferredMetricsTieBreakers>
 </document>

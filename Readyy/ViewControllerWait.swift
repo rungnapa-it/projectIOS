@@ -25,7 +25,7 @@ class ViewControllerWait: UIViewController {
         getQuestion()
 
         
-        showName(dict: gamer.getDictionaryGamer())
+        //showName(dict: gamer.getDictionaryGamer())
         accessToDictionary(dict: gamer.getDictionaryGamer())
         
 //
@@ -101,28 +101,28 @@ class ViewControllerWait: UIViewController {
         
     
     
-    func showName(dict:[String:Array<String>]) {
-        var array = [String]()
-        let id = accessToDictionary(dict: dict)
-        self.showNamePlayers.text = gamer.getNamePlayersIndex(id: id)
-        print(dict.isEmpty)
-        while (dict.count != 0) {
-            for (key , value) in dict {
-                if (key == id){
-                    for (v) in value{
-                        array.append(v)
-                        print("AictionaryName : \(dict)")
-                        print("ArrayName : \(array)")
-                        
-                    }
-                }
-                
-                
-        }
-       
-    }
+//    func showName(dict:[String:Array<String>]) {
+//        var array = [String]()
+//        let id = accessToDictionary(dict: dict)
+//        self.showNamePlayers.text = gamer.getNamePlayersIndex(id: id)
+//        print(dict.isEmpty)
+//        while (dict.count != 0) {
+//            for (key , value) in dict {
+//                if (key == id){
+//                    for (v) in value{
+//                        array.append(v)
+//                        print("AictionaryName : \(dict)")
+//                        print("ArrayName : \(array)")
+//
+//                    }
+//                }
+//
+//
+//        }
+//
+//    }
 
-    }
+    //}
     
     func accessToDictionary(dict:[String:Array<String>]) -> String {
         var namePlayers = ""
@@ -134,9 +134,10 @@ class ViewControllerWait: UIViewController {
         return namePlayers
         
     }
+}
     
 
     
     
-}
+
 
