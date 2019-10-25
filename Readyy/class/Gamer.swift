@@ -15,7 +15,7 @@ class Gamer {
     private var score:Int
     private var high_score:Int
     private var room:String
-    private var status:String
+    
     private var roomOrder:Int
     private var orderId:Int
     
@@ -24,19 +24,15 @@ class Gamer {
         self.name = name
         self.score = 0
         self.high_score = 0
-        self.status = ""
+       
         self.room = ""
         self.roomOrder = 0
         self.orderId = 100
         
     }
     
-    func setStatus(status:String)  {
-        self.status = status
-    }
-    func getStatus() -> String {
-        return status
-    }
+    
+    
     func setRoom(){
         self.room = "r\(getRoomOrder())"
         setRoomOrder()
@@ -104,8 +100,9 @@ class Gamer {
         subStringGamer.step1(json: json)
     }
     
-    func addDictionary(id:String , name:String , score:String , high_score:String ,room:String, status:String)  {
-        dict[id] = [name,score,high_score,room,status]
+    func addDictionary(id:String , name:String , score:String , high_score:String ,room:String )  {
+        dict[id] = [name,score,high_score,room]
+        print(dict)
         
     }
     
@@ -114,6 +111,7 @@ class Gamer {
             getJSON(id: key, name: value[0], score: value[1], high_score: value[2], room: value[3])
         }
     }
+<<<<<<< HEAD
     
     func getDictionaryGamer() -> [String:Array<String>] {
         
@@ -140,6 +138,20 @@ class Gamer {
     
    
     
+=======
+    func isName(name:String) -> Bool {
+        var bool = false
+        for (key,value ) in dict{
+            if (value[0] == name){
+               bool = true
+               
+            }
+            break
+        }
+        
+        return bool
+    }
+>>>>>>> 7417687c8896a92b3428270aa4e13345a71882d9
     
     
 }

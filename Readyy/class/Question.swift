@@ -22,7 +22,7 @@ class Question {
         self.name = ""
         self.ans = ""
         
-        self.questionOrder = 222
+        self.questionOrder = 100
         self.room = ""
         
         
@@ -74,7 +74,8 @@ class Question {
     }
     
     func getJSON(id:String,name:String,ans:String,room:String) -> String {
-        return "[{\"id\":\"\(id)\",\"name\":\"\(name)\",\"ans\":\"\(ans)\",\"room\":\"\(room)\"}]";
+        return "[{\"id\":\"\(id)\",\"name\":\"\(name)\",\"answer\":\"\(ans)\",\"room\":\"\(room)\"}]";
+        
     }
     
     func questionJSON(json:String) {
@@ -130,14 +131,46 @@ class Question {
     
     func DictionaryQuestion()  {
         for (key,value) in dict{
-            postQuestion(question:getJSON(id: key,name: value[0],ans: value[1],room: value[2]))
+            print("post")
+            print(getJSON(id: key,name: value[0],ans: value[1],room: value[2]))
+            
+            if let range: Range<String.Index> = key.range(of: "1") {
+                let index: Int = key.distance(from: key.startIndex, to: range.lowerBound)
+               postQuestion(question:getJSON(id: key,name: value[0],ans: value[1],room: value[2]))
+                
+                
+            }
+            
+            
+            
+            
         }
     }
     
     func postQuestion(question:String)  {
+        let urlString = "http://localhost:8081/question"
+        guard let url = URL(string: urlString) else {return}
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        let session = URLSession.shared
+        request.httpShouldHandleCookies = false
         
+        
+        
+        print("request : \(question)")
+        
+        
+        //HTTP Headers
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.addValue("application/json", forHTTPHeaderField: "Accept")
+        
+        session.dataTask(with: request) { (data, response, error) in
+            if error != nil {
+                print(error!)
+            }
+            
+            }.resume()
     }
-    
     
     
     

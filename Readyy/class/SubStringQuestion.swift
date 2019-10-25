@@ -12,6 +12,7 @@ class SubStringQuestion {
         var strArray = json.components(separatedBy: "},")
         for i in 0..<strArray.endIndex{
             var part1 = strArray[i]
+            
             step2(json: part1)
         }
     }
@@ -34,6 +35,10 @@ class SubStringQuestion {
         var strArrayName = name.components(separatedBy: ":\"")
         var strArrayAns = ans.components(separatedBy: ":\"")
         var strArrayRoom = room.components(separatedBy: ":\"")
+<<<<<<< HEAD
+=======
+       
+>>>>>>> 7417687c8896a92b3428270aa4e13345a71882d9
         let id = strArrayid[1]
         let name = strArrayName[1]
         let ans = strArrayAns[1]

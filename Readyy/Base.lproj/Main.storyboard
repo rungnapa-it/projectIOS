@@ -152,8 +152,8 @@
                         <outlet property="labelChoices1" destination="aLI-cY-dSS" id="GhH-vD-Rub"/>
                         <outlet property="labelChoices2" destination="5QG-ed-XIl" id="Xd1-jJ-8Wy"/>
                         <outlet property="labelChoices3" destination="pyq-E8-I2w" id="JYY-TV-se3"/>
+                        <outlet property="labelChoices4" destination="AAD-8o-89x" id="dRr-xe-BO0"/>
                         <outlet property="labelQuestion" destination="Nw0-C7-QEU" id="bdC-81-YS6"/>
-                        <outlet property="laberChoices4" destination="AAD-8o-89x" id="o2T-4D-30r"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cS8-fN-xA5" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -213,7 +213,7 @@
         <scene sceneID="swV-D4-Fm3">
             <objects>
                 <viewController id="HgM-D4-H5A" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="bAn-EX-y1a">
+                    <view key="view" contentMode="scaleToFill" restorationIdentifier="page2" id="bAn-EX-y1a">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -228,7 +228,7 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <segue destination="wwl-IX-mu8" kind="show" id="c6w-Ed-SAq"/>
+                                            <segue destination="wwl-IX-mu8" kind="show" identifier="" id="c6w-Ed-SAq"/>
                                         </connections>
                                     </button>
                                     <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter pin room" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AgN-Qv-EtP">
@@ -245,6 +245,9 @@
                                         <state key="normal" title="RANDOM PIN ROOM">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="randomROOM:" destination="HgM-D4-H5A" eventType="touchUpInside" id="avf-zz-S8a"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="or" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PWw-Yd-Qru">
                                         <rect key="frame" x="219" y="413" width="16" height="21"/>
@@ -351,8 +354,7 @@
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="Enter:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7ii-z8-S7a"/>
-                                                    <segue destination="HgM-D4-H5A" kind="show" id="uSJ-No-BY6"/>
+                                                    <action selector="nextPage2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3Kk-vG-EQl"/>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ENTER YOUR NAME :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JOt-oQ-6ZJ">
@@ -369,14 +371,13 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1gh-w1-oUx">
-                                                <rect key="frame" x="174" y="485" width="46" height="30"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HQC-yy-Ewc">
+                                                <rect key="frame" x="42" y="443" width="311" height="46"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" title="Button"/>
-                                                <connections>
-                                                    <action selector="post:" destination="BYZ-38-t0r" eventType="touchDragInside" id="l2c-oc-EtD"/>
-                                                </connections>
-                                            </button>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" red="1" green="0.2580555987" blue="0.40534731400000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" red="1" green="0.74999882380000005" blue="0.75424122839999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     </view>
@@ -400,12 +401,14 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="exception" destination="HQC-yy-Ewc" id="bre-gx-kDB"/>
                         <outlet property="fieldname" destination="PGz-Ms-VkX" id="u7O-J1-fF7"/>
+                        <segue destination="HgM-D4-H5A" kind="show" identifier="page2" id="MIq-k9-Mn1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2126" y="103"/>
+            <point key="canvasLocation" x="-2127.536231884058" y="102.45535714285714"/>
         </scene>
         <!--View Controller Wait-->
         <scene sceneID="7Zg-gi-cNE">
@@ -791,7 +794,11 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+<<<<<<< HEAD
         <segue reference="a01-De-qUu"/>
         <segue reference="Wh5-AQ-j93"/>
+=======
+        <segue reference="c6w-Ed-SAq"/>
+>>>>>>> 7417687c8896a92b3428270aa4e13345a71882d9
     </inferredMetricsTieBreakers>
 </document>
