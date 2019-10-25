@@ -151,7 +151,7 @@ class ViewControllerPlaying: UIViewController {
         
     }
         
-        
+    //test
     func accessToDictionary(dict:[String:Array<String>]) -> String {
         var keyQuestion = ""
         for (key,value) in dict{
