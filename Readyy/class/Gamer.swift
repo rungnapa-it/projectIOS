@@ -116,9 +116,9 @@ class Gamer {
         for (key,value ) in dict{
             if (value[0] == name){
                bool = true
-               
+                
             }
-            break
+            
         }
         
         return bool

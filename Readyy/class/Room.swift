@@ -10,23 +10,31 @@ import Foundation
 class Room{
     private var dictRoom = Dictionary<String,Array<String>>()
     var room:String
-    var roomOrder:Int
+    
     
     init() {
         self.room = ""
-        self.roomOrder = 111
+      
     }
     
-    func roomId()  {
-        room = "R\(roomOrder)"
+    func roomRandom() -> String {
+        var i = 0 , key = "" , keyOld = ""
+        while i<5 {
+            
+            let  number = Int.random(in: 0..<10)
+            key = "\(keyOld)\(number)"
+            keyOld = "\(key)"
+            
+        }
+        return key
     }
     
-    func setRoomOrder()  {
-        roomOrder+=1
-    }
+   
     
-    func setDictionaryRoom(status:String , win1:String , win2:String , win3:String)  {
-       
+    
+    
+    func addDictionary(roomId:String,status:String , win1:String , win2:String , win3:String)  {
+       dictRoom[roomId] = [status,win1,win2,win3]
     }
     
     

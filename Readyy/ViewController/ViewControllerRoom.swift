@@ -2,7 +2,7 @@
 //  ViewControllerRoom.swift
 //  Readyy
 //
-//  Created by Milk on 23/10/2562 BE.
+//  Created by Milk on 25/10/2562 BE.
 //  Copyright © 2562 Ratsuda Suwan. All rights reserved.
 //
 
@@ -14,10 +14,6 @@ class ViewControllerRoom: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-    }
-    @IBAction func randomROOM(_ sender: Any) {
-        
-        
     }
     
 

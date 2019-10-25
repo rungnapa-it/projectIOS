@@ -23,6 +23,7 @@ class ViewController: UIViewController {
         if (fieldname.text != ""){
             
             if (gamer.isName(name: fieldname.text!) == true){
+                
                 exception.text = "มีผู้ใช้ชื่อนี้แล้ว"
             }else{
                let id = gamer.setId()
