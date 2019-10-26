@@ -9,7 +9,7 @@
 import Foundation
 class Room{
     private var dictRoom = Dictionary<String,Array<String>>()
-    var room:String
+    private var room:String
     
     
     init() {
@@ -17,13 +17,22 @@ class Room{
       
     }
     
-    func roomRandom() -> String {
+    func setRoom(room:String)  {
+        self.room = room
+    }
+    
+    func getRoom() -> String {
+        return room
+    }
+    
+    func randomRoom() -> String{
         var i = 0 , key = "" , keyOld = ""
         while i<5 {
             
             let  number = Int.random(in: 0..<10)
             key = "\(keyOld)\(number)"
             keyOld = "\(key)"
+            i+=1
             
         }
         return key

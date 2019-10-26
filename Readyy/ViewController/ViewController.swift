@@ -27,7 +27,8 @@ class ViewController: UIViewController {
                 exception.text = "มีผู้ใช้ชื่อนี้แล้ว"
             }else{
                let id = gamer.setId()
-                gamer.addDictionary(id:gamer.getId(), name: fieldname.text!, score: "0", high_score: "0", room: "lobby")
+                gamer.addDictionary(id:gamer.getId(), name: fieldname.text!, score: "0", high_score: "0", roomId: "-", status : "lobby")
+                gamer.setName(name: fieldname.text!)
                 
             performSegue(withIdentifier: "page2", sender: self)
             }

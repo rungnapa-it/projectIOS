@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		24008A46236366E9007E0970 /* ViewControllerRoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24008A45236366E9007E0970 /* ViewControllerRoom.swift */; };
 		2422BBEC234F6F9E001EADFA /* SubStringChoices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2422BBEB234F6F9E001EADFA /* SubStringChoices.swift */; };
 		24474B55234E15F9003B3167 /* ViewControllerPlaying.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24474B54234E15F9003B3167 /* ViewControllerPlaying.swift */; };
 		244D90A62348EC8D00DB7CC1 /* Choices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244D90A52348EC8D00DB7CC1 /* Choices.swift */; };
@@ -14,7 +15,6 @@
 		244D90AA2348ECA600DB7CC1 /* Gamer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244D90A92348ECA600DB7CC1 /* Gamer.swift */; };
 		244D90AC2348EF9200DB7CC1 /* ViewControllerAddQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244D90AB2348EF9200DB7CC1 /* ViewControllerAddQ.swift */; };
 		2453BC6F23561F2F0020A887 /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2453BC6E23561F2F0020A887 /* Room.swift */; };
-		2454AEB2235F76A500C7397E /* ViewControllerRoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2454AEB1235F76A500C7397E /* ViewControllerRoom.swift */; };
 		248D5739234C8D8A00DFF1AE /* SubStringQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248D5738234C8D8A00DFF1AE /* SubStringQuestion.swift */; };
 		248D573F234C938600DFF1AE /* ViewControllerWait.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248D573E234C938600DFF1AE /* ViewControllerWait.swift */; };
 		B3339485232A026300F907DA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3339484232A026300F907DA /* AppDelegate.swift */; };
@@ -45,6 +45,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		24008A45236366E9007E0970 /* ViewControllerRoom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerRoom.swift; sourceTree = "<group>"; };
 		2422BBEB234F6F9E001EADFA /* SubStringChoices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubStringChoices.swift; sourceTree = "<group>"; };
 		24474B54234E15F9003B3167 /* ViewControllerPlaying.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewControllerPlaying.swift; path = Readyy/ViewControllerPlaying.swift; sourceTree = SOURCE_ROOT; };
 		244D90A52348EC8D00DB7CC1 /* Choices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Choices.swift; sourceTree = "<group>"; };
@@ -99,6 +100,7 @@
 		2422BBE7234F6D8A001EADFA /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				24008A45236366E9007E0970 /* ViewControllerRoom.swift */,
 				24474B54234E15F9003B3167 /* ViewControllerPlaying.swift */,
 				244D90AB2348EF9200DB7CC1 /* ViewControllerAddQ.swift */,
 				248D573E234C938600DFF1AE /* ViewControllerWait.swift */,
@@ -305,11 +307,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2454AEB2235F76A500C7397E /* ViewControllerRoom.swift in Sources */,
 				244D90AC2348EF9200DB7CC1 /* ViewControllerAddQ.swift in Sources */,
 				248D5739234C8D8A00DFF1AE /* SubStringQuestion.swift in Sources */,
 				2453BC6F23561F2F0020A887 /* Room.swift in Sources */,
 				B3339487232A026300F907DA /* ViewController.swift in Sources */,
+				24008A46236366E9007E0970 /* ViewControllerRoom.swift in Sources */,
 				244D90A82348EC9A00DB7CC1 /* Question.swift in Sources */,
 				244D90AA2348ECA600DB7CC1 /* Gamer.swift in Sources */,
 				244D90A62348EC8D00DB7CC1 /* Choices.swift in Sources */,

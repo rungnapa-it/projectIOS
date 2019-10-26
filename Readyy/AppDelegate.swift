@@ -10,6 +10,7 @@ import UIKit
 var question = Question()
 var choices = Choices()
 var gamer = Gamer(name: "")
+var room = Room()
 var subStringQuestion = SubStringQuestion()
 var subStringChoices = SubStringChoices()
 var subStringGamer = SubStringGamer()
