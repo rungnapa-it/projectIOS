@@ -228,7 +228,7 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <segue destination="wwl-IX-mu8" kind="show" identifier="" id="c6w-Ed-SAq"/>
+                                            <action selector="nextToRoom:" destination="HgM-D4-H5A" eventType="touchUpInside" id="fpW-Sq-brS"/>
                                         </connections>
                                     </button>
                                     <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter pin room" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AgN-Qv-EtP">
@@ -263,6 +263,13 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="exception" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b8s-9e-BSd">
+                                        <rect key="frame" x="124" y="494" width="203" height="39"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="1" green="0.11572966167372301" blue="0.0060826491667044236" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="0.74999882380000005" blue="0.75424122839999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </view>
@@ -276,6 +283,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="zMr-lZ-IDt"/>
                     </view>
+                    <connections>
+                        <outlet property="labelException" destination="b8s-9e-BSd" id="u6X-EI-uyJ"/>
+                        <outlet property="pinLabel" destination="AgN-Qv-EtP" id="5cq-IL-KUr"/>
+                        <segue destination="wwl-IX-mu8" kind="show" identifier="page3" id="vfE-dP-UHD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wQK-OL-TKQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -749,6 +761,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="c6w-Ed-SAq"/>
+        <segue reference="vfE-dP-UHD"/>
     </inferredMetricsTieBreakers>
 </document>

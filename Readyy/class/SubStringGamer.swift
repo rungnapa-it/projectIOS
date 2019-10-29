@@ -89,7 +89,7 @@ class SubStringGamer {
         let high_score = strArrayHighScore[1]
         
         //print("id : \(id) \n name : \(name) \n score : \(score) \n high_score : \(high_score) \n status: \(status) \n room : \(room)")
-        print("sub : roomid \(room) status \(status)")
+       
         gamer.addDictionary(id: id , name :name , score: score, high_score: high_score, roomId: room , status : status)
         
     }

@@ -38,13 +38,31 @@ class Room{
         return key
     }
     
-   
-    
-    
     
     func addDictionary(roomId:String,status:String , win1:String , win2:String , win3:String)  {
        dictRoom[roomId] = [status,win1,win2,win3]
+        print(dictRoom)
     }
+    
+    func isPIN(PIN:String)-> Bool{
+        print("\(dictRoom["PIN"])")
+        
+         if (dictRoom[PIN] == nil){
+            return false
+        }
+        
+        return true
+    }
+    
+    func roomJSON(json:String){
+        subStringRoom.step1(json: json)
+    }
+    
+    
+        
+        
+        
+    
     
     
 }

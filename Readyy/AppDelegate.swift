@@ -14,6 +14,7 @@ var room = Room()
 var subStringQuestion = SubStringQuestion()
 var subStringChoices = SubStringChoices()
 var subStringGamer = SubStringGamer()
+var subStringRoom = SubStringRoom()
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 

@@ -48,7 +48,7 @@ class Gamer {
     }
     func setName(name:String)  {
         self.name = name
-        print(name)
+        
         //print(gamerJSON())
         
     }
@@ -90,9 +90,9 @@ class Gamer {
     }
     
     func addDictionary(id:String , name:String , score:String , high_score:String ,roomId:String ,status:String  )  {
-        print("add : roomid \(roomId) , status \(status)")
+       
         dict[id] = [name,score,high_score,status,roomId]
-        print(dict)
+        
         
     }
     
@@ -150,7 +150,7 @@ class Gamer {
                 break
             }
         }
-        print(dict)
+        
         array = dict[k]!
         array[4] = roomId
         dict[k] = array

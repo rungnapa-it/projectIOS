@@ -9,16 +9,38 @@
 import UIKit
 
 class ViewControllerRoom: UIViewController {
-
+    @IBOutlet weak var labelException: UILabel!
+    
+    @IBOutlet weak var pinLabel: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     
+    @IBAction func nextToRoom(_ sender: Any) {
+        var PIN:Bool
+        if (pinLabel.text == ""){
+            labelException.text = "กรุณากรอก PIN"
+        }else{
+        
+            PIN = room.isPIN(PIN: pinLabel.text!)
+        
+            if (PIN == true ){
+            performSegue(withIdentifier: "page3", sender: self)
+            gamer.setRoomDictionary(name: gamer.getName(), roomId: pinLabel.text!)
+            
+            }else{
+                labelException.text = "ไม่มี PIN นี้"
+                print("nonPIN")
+            }
+        }
+        
+    }
     @IBAction func randomRoom(_ sender: Any) {
        var id = room.randomRoom()
         gamer.setRoomDictionary(name: gamer.getName(), roomId: id)
+        performSegue(withIdentifier: "page3", sender: self)
        
     }
     

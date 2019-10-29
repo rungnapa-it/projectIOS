@@ -16,6 +16,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         getGamer()
+        getRoom()
         // Do any additional setup after loading the view.
     }
     
@@ -57,6 +58,25 @@ class ViewController: UIViewController {
                     
                     //self.setChoices(ch:self.choices)
                     //print("dataChoices: \(dataString)")
+                }
+            }
+        }
+        task.resume()
+    }
+    func getRoom(){
+        let url = URL(string: "http://localhost:8081/room")!
+        let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
+            if let error = error {
+                print("error: \(error)")
+            } else {
+                if (response as? HTTPURLResponse) != nil {
+                    //print("statusCode: \(response.statusCode)")
+                }
+                if let data = data, let dataString = String(data: data, encoding: .utf8) {
+                    
+                    room.roomJSON(json: dataString)
+                    
+                   
                 }
             }
         }

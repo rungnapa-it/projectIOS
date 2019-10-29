@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		24008A46236366E9007E0970 /* ViewControllerRoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24008A45236366E9007E0970 /* ViewControllerRoom.swift */; };
+		240FC0F123681824007C6442 /* SubStringRoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240FC0F023681824007C6442 /* SubStringRoom.swift */; };
 		2422BBEC234F6F9E001EADFA /* SubStringChoices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2422BBEB234F6F9E001EADFA /* SubStringChoices.swift */; };
 		24474B55234E15F9003B3167 /* ViewControllerPlaying.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24474B54234E15F9003B3167 /* ViewControllerPlaying.swift */; };
 		244D90A62348EC8D00DB7CC1 /* Choices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244D90A52348EC8D00DB7CC1 /* Choices.swift */; };
@@ -46,6 +47,7 @@
 
 /* Begin PBXFileReference section */
 		24008A45236366E9007E0970 /* ViewControllerRoom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerRoom.swift; sourceTree = "<group>"; };
+		240FC0F023681824007C6442 /* SubStringRoom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubStringRoom.swift; sourceTree = "<group>"; };
 		2422BBEB234F6F9E001EADFA /* SubStringChoices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubStringChoices.swift; sourceTree = "<group>"; };
 		24474B54234E15F9003B3167 /* ViewControllerPlaying.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewControllerPlaying.swift; path = Readyy/ViewControllerPlaying.swift; sourceTree = SOURCE_ROOT; };
 		244D90A52348EC8D00DB7CC1 /* Choices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Choices.swift; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 				2422BBEB234F6F9E001EADFA /* SubStringChoices.swift */,
 				B36140F22355DD5D00F42065 /* SubStringGamer.swift */,
 				2453BC6E23561F2F0020A887 /* Room.swift */,
+				240FC0F023681824007C6442 /* SubStringRoom.swift */,
 			);
 			path = class;
 			sourceTree = "<group>";
@@ -319,6 +322,7 @@
 				B3339485232A026300F907DA /* AppDelegate.swift in Sources */,
 				2422BBEC234F6F9E001EADFA /* SubStringChoices.swift in Sources */,
 				B36140F32355DD5D00F42065 /* SubStringGamer.swift in Sources */,
+				240FC0F123681824007C6442 /* SubStringRoom.swift in Sources */,
 				248D573F234C938600DFF1AE /* ViewControllerWait.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
