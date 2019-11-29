@@ -138,17 +138,15 @@ class Question {
                 let index: Int = key.distance(from: key.startIndex, to: range.lowerBound)
                postQuestion(question:getJSON(id: key,name: value[0],ans: value[1],room: value[2]))
                 
-                
             }
-            
-            
-            
             
         }
     }
     
+   
+    
     func postQuestion(question:String)  {
-        let urlString = "http://localhost:8081/question"
+        let urlString = "http://10.2.3.241:8081/question"
         guard let url = URL(string: urlString) else {return}
         var request = URLRequest(url: url)
         request.httpMethod = "POST"

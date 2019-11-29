@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import AVKit
 class ViewControllerPlaying: UIViewController {
     var dictionary = choices.getDictionary()
     var buttonNext = true
@@ -15,7 +15,11 @@ class ViewControllerPlaying: UIViewController {
     var buttonchoices2 = false
     var buttonchoices3 = false
     var buttonchoices4 = false
+    var high = 0
+    var AudioPlayer = AVAudioPlayer()
+    
    
+    @IBOutlet weak var highScore: UILabel!
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var score: UILabel!
     @IBOutlet weak var choices1Button: UIButton!
@@ -26,7 +30,7 @@ class ViewControllerPlaying: UIViewController {
     @IBOutlet weak var timeLabel: UILabel!
     var timer = Timer()
     var isTimeRuning = false
-    var seconds = 60
+    var seconds = 30
     
     func runTimer() {
         timer = Timer.scheduledTimer(timeInterval: 1, target: self,   selector: (#selector(self.updateTimer)), userInfo: nil, repeats: true)
@@ -35,10 +39,20 @@ class ViewControllerPlaying: UIViewController {
         if (seconds != 0){
             seconds -= 1     //This will decrement(count down)the seconds.
             timeLabel.text = "\(seconds)" //This will update the label.
+            musicPlayer.play()
+            
+        }else if (seconds == 0){
+            if (high < Int(score.text!)!){
+                gamer.setHighScoreByNameUser(user: user, score: score.text!, highScore: score.text!)
+            }else if (high >= Int(score.text!)!){
+                 gamer.setHighScoreByNameUser(user: user, score: score.text!, highScore: highScore.text!)
+            }
+            performSegue(withIdentifier: "pageTimeOut", sender: self)
         }
     }
     
     override func viewDidLoad() {
+        super.viewDidLoad()
         
         runTimer()
         
@@ -49,6 +63,7 @@ class ViewControllerPlaying: UIViewController {
         choices.getDictionary()
         questionLabel.lineBreakMode = .byWordWrapping
         questionLabel.numberOfLines = 0;
+        
        
         
     }
@@ -56,12 +71,25 @@ class ViewControllerPlaying: UIViewController {
         buttonchoices1 = true
         let choicesTitle = (sender as AnyObject).title(for: .normal)!
         let totalScore  = question.getScore(qu: questionLabel.text!, ans: choicesTitle)+Int(score.text!)!
+        
         if (question.getScore(qu: questionLabel.text!, ans: choicesTitle ) == 1){
             score.backgroundColor = UIColor.green
         }else{
             score.backgroundColor = UIColor.red
         }
-        self.score.text = "\(totalScore)"
+       if (question.getScore(qu: questionLabel.text!, ans: choicesTitle) == 0){
+            if (totalScore > high){
+                high = totalScore
+            }
+            self.highScore.text = "\(high)"
+            self.score.text = "\(0)"
+        
+       }else{
+        
+            self.score.text = "\(totalScore)"
+        }
+       
+        
         ready()
     }
   
@@ -75,7 +103,18 @@ class ViewControllerPlaying: UIViewController {
         }else{
             score.backgroundColor = UIColor.red
         }
-        self.score.text = "\(totalScore)"
+        if (question.getScore(qu: questionLabel.text!, ans: choicesTitle) == 0){
+            if (totalScore > high){
+                high = totalScore
+            }
+            self.highScore.text = "\(high)"
+            self.score.text = "\(0)"
+            
+        }else{
+            
+            self.score.text = "\(totalScore)"
+        }
+        
         ready()
     }
     
@@ -88,7 +127,17 @@ class ViewControllerPlaying: UIViewController {
         }else{
             score.backgroundColor = UIColor.red
         }
-        self.score.text = "\(totalScore)"
+        if (question.getScore(qu: questionLabel.text!, ans: choicesTitle) == 0){
+            if (totalScore > high){
+                high = totalScore
+            }
+            self.highScore.text = "\(high)"
+            self.score.text = "\(0)"
+            
+        }else{
+            
+            self.score.text = "\(totalScore)"
+        }
         ready()
     }
     @IBAction func setChoices4(_ sender: Any) {
@@ -100,7 +149,17 @@ class ViewControllerPlaying: UIViewController {
         }else{
             score.backgroundColor = UIColor.red
         }
-        self.score.text = "\(totalScore)"
+        if (question.getScore(qu: questionLabel.text!, ans: choicesTitle) == 0){
+            if (totalScore > high){
+                high = totalScore
+            }
+            self.highScore.text = "\(high)"
+            self.score.text = "\(0)"
+            
+        }else{
+            
+            self.score.text = "\(totalScore)"
+        }
         ready()
     }
     
@@ -119,6 +178,8 @@ class ViewControllerPlaying: UIViewController {
             buttonchoices2 = false
             buttonchoices3 = false
             buttonchoices4 = false
+            var room = gamer.getRoomIdByNameUser(user: user)
+            
             var array = [String]()
             var id = accessToDictionary(dict: dictionary)
             self.questionLabel.text = question.getNameIndex(id: id)
@@ -132,8 +193,7 @@ class ViewControllerPlaying: UIViewController {
             }
             
             //dictionary[id] = nil
-            print("Aictionary : \(dictionary)")
-            print("Array : \(array)")
+            
             if (array.count == 4){
                 var choices1 = array[0]
                 var choices2 = array[1]

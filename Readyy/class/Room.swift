@@ -10,10 +10,12 @@ import Foundation
 class Room{
     private var dictRoom = Dictionary<String,Array<String>>()
     private var room:String
+    private var status :String
     
     
     init() {
         self.room = ""
+        self.status = ""
       
     }
     
@@ -23,6 +25,13 @@ class Room{
     
     func getRoom() -> String {
         return room
+    }
+    
+    func setStatus(status:String)  {
+        self.status = status
+    }
+    func getStatus() -> String {
+        return status
     }
     
     func randomRoom() -> String{
@@ -45,18 +54,22 @@ class Room{
     }
     
     func isPIN(PIN:String)-> Bool{
-        print("\(dictRoom["PIN"])")
-        
-         if (dictRoom[PIN] == nil){
-            return false
+        dictRoom = gamer.getDictionaryGamer()
+        for (key , value) in dictRoom{
+            if (value[3] == PIN){
+            return true
+            }
         }
-        
-        return true
+        return false
+            
     }
     
     func roomJSON(json:String){
         subStringRoom.step1(json: json)
     }
+    
+    
+    
     
     
         

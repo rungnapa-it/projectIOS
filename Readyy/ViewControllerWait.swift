@@ -20,22 +20,29 @@ class ViewControllerWait: UIViewController {
     
     override func viewDidLoad() {
         
+       
         super.viewDidLoad()
+        viewController.getGamer()
+        
+        print(gamer.getDictionaryGamer())
+        pinRoom.text = gamer.getRoomIdByNameUser(user: user)
+        nameKey.text = gamer.getHandByIdRoom(id: pinRoom.text!)
         
         getQuestion()
-
+        numOfPlayers.text = String(arrayShowNamePlayers(dict: gamer.getDictionaryGamer()).count)
+        showName()
+            
         
-        //showName(dict: gamer.getDictionaryGamer())
-        accessToDictionary(dict: gamer.getDictionaryGamer())
         
-//
-        
-
-        
-
-        // Do any additional setup after loading the view.
 }
     
+    @IBAction func Back(_ sender: Any) {
+        gamer.setRoomDictionary(name: gamer.getName(), value: "lobby", index: 3)
+        gamer.setRoomDictionary(name: gamer.getName(), value: "-", index: 4)
+        gamer.setStatus(status: "lobby")
+        gamer.setRoomId(roomId: "-")
+        viewControllerRoom.postJSON(url: "http://10.2.3.241:8081/gamer",jsonBody: gamer.getJSON())
+    }
     
     @IBAction func Playing(_ sender: Any) {
         //getChoies()
@@ -44,7 +51,7 @@ class ViewControllerWait: UIViewController {
     
     
     func getQuestion()  {
-        let url = URL(string: "http://localhost:8081/question")!
+        let url = URL(string: "http://10.2.3.241:8081/question")!
         let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
             if let error = error {
                 print("error: \(error)")
@@ -66,7 +73,7 @@ class ViewControllerWait: UIViewController {
     }
     func getChoies() {
         
-        let url = URL(string: "http://localhost:8081/choices")!
+        let url = URL(string: "http://10.2.3.241:8081/choices")!
         let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
             if let error = error {
                 print("error: \(error)")
@@ -87,6 +94,44 @@ class ViewControllerWait: UIViewController {
     }
     
     
+    func arrayShowNamePlayers(dict:[String:Array<String>]) ->Array<String> {
+        var name = ""
+        var array = [String]()
+        var room = gamer.getRoomIdByNameUser(user: user)
+        for (key,value) in dict {
+            if (value[3] == room){
+                array.append(value[0])
+            }
+        }
+        //print("ArrayName: \(array)")
+        return array
+       
+    }
+    
+    func showName() -> String{
+        var keep = ""
+        
+            viewController.getGamer()
+            var array = arrayShowNamePlayers(dict: gamer.getDictionaryGamer())
+            var i = ""
+            
+            
+            for i in array {
+                keep.append(i)
+                keep.append("\n")
+                showNamePlayers.text = keep
+                // print(keep)
+            
+            }
+       
+            
+        
+        return keep
+    }
+
+}
+    
+    
         
         
         /*
@@ -100,41 +145,7 @@ class ViewControllerWait: UIViewController {
          */
         
     
-    
-//    func showName(dict:[String:Array<String>]) {
-//        var array = [String]()
-//        let id = accessToDictionary(dict: dict)
-//        self.showNamePlayers.text = gamer.getNamePlayersIndex(id: id)
-//        print(dict.isEmpty)
-//        while (dict.count != 0) {
-//            for (key , value) in dict {
-//                if (key == id){
-//                    for (v) in value{
-//                        array.append(v)
-//                        print("AictionaryName : \(dict)")
-//                        print("ArrayName : \(array)")
-//
-//                    }
-//                }
-//
-//
-//        }
-//
-//    }
 
-    //}
-    
-    func accessToDictionary(dict:[String:Array<String>]) -> String {
-        var namePlayers = ""
-        for (key, value) in dict{
-            namePlayers = key
-            print("Eiei: \(namePlayers)")
-            break
-        }
-        return namePlayers
-        
-    }
-}
     
 
     

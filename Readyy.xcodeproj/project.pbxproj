@@ -10,6 +10,9 @@
 		24008A46236366E9007E0970 /* ViewControllerRoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24008A45236366E9007E0970 /* ViewControllerRoom.swift */; };
 		240FC0F123681824007C6442 /* SubStringRoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240FC0F023681824007C6442 /* SubStringRoom.swift */; };
 		2422BBEC234F6F9E001EADFA /* SubStringChoices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2422BBEB234F6F9E001EADFA /* SubStringChoices.swift */; };
+		24295D34238AE2560025A2C3 /* ViewControllerTimeOut.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24295D33238AE2560025A2C3 /* ViewControllerTimeOut.swift */; };
+		24365DB3238B663E0034C8F8 /* MusicPlayer .swift in Sources */ = {isa = PBXBuildFile; fileRef = 24365DB2238B663E0034C8F8 /* MusicPlayer .swift */; };
+		24365DB5238B66EC0034C8F8 /* when.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 24365DB4238B66EC0034C8F8 /* when.mp3 */; };
 		24474B55234E15F9003B3167 /* ViewControllerPlaying.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24474B54234E15F9003B3167 /* ViewControllerPlaying.swift */; };
 		244D90A62348EC8D00DB7CC1 /* Choices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244D90A52348EC8D00DB7CC1 /* Choices.swift */; };
 		244D90A82348EC9A00DB7CC1 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244D90A72348EC9A00DB7CC1 /* Question.swift */; };
@@ -49,6 +52,11 @@
 		24008A45236366E9007E0970 /* ViewControllerRoom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerRoom.swift; sourceTree = "<group>"; };
 		240FC0F023681824007C6442 /* SubStringRoom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubStringRoom.swift; sourceTree = "<group>"; };
 		2422BBEB234F6F9E001EADFA /* SubStringChoices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubStringChoices.swift; sourceTree = "<group>"; };
+		24295D33238AE2560025A2C3 /* ViewControllerTimeOut.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerTimeOut.swift; sourceTree = "<group>"; };
+		24365DB2238B663E0034C8F8 /* MusicPlayer .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MusicPlayer .swift"; sourceTree = "<group>"; };
+		24365DB4238B66EC0034C8F8 /* when.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = when.mp3; path = ../../../../../../when.mp3; sourceTree = "<group>"; };
+		24365DB6238B69110034C8F8 /* when.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = when.mp3; sourceTree = "<group>"; };
+		24365DB7238B6E5F0034C8F8 /* when.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = when.mp3; sourceTree = "<group>"; };
 		24474B54234E15F9003B3167 /* ViewControllerPlaying.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewControllerPlaying.swift; path = Readyy/ViewControllerPlaying.swift; sourceTree = SOURCE_ROOT; };
 		244D90A52348EC8D00DB7CC1 /* Choices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Choices.swift; sourceTree = "<group>"; };
 		244D90A72348EC9A00DB7CC1 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
@@ -102,11 +110,13 @@
 		2422BBE7234F6D8A001EADFA /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				24365DB7238B6E5F0034C8F8 /* when.mp3 */,
 				24008A45236366E9007E0970 /* ViewControllerRoom.swift */,
 				24474B54234E15F9003B3167 /* ViewControllerPlaying.swift */,
 				244D90AB2348EF9200DB7CC1 /* ViewControllerAddQ.swift */,
 				248D573E234C938600DFF1AE /* ViewControllerWait.swift */,
 				B3339486232A026300F907DA /* ViewController.swift */,
+				24295D33238AE2560025A2C3 /* ViewControllerTimeOut.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -114,6 +124,7 @@
 		2422BBE8234F6DB5001EADFA /* class */ = {
 			isa = PBXGroup;
 			children = (
+				24365DB6238B69110034C8F8 /* when.mp3 */,
 				248D5738234C8D8A00DFF1AE /* SubStringQuestion.swift */,
 				244D90A92348ECA600DB7CC1 /* Gamer.swift */,
 				244D90A72348EC9A00DB7CC1 /* Question.swift */,
@@ -122,6 +133,7 @@
 				B36140F22355DD5D00F42065 /* SubStringGamer.swift */,
 				2453BC6E23561F2F0020A887 /* Room.swift */,
 				240FC0F023681824007C6442 /* SubStringRoom.swift */,
+				24365DB2238B663E0034C8F8 /* MusicPlayer .swift */,
 			);
 			path = class;
 			sourceTree = "<group>";
@@ -150,6 +162,7 @@
 		B3339483232A026300F907DA /* Readyy */ = {
 			isa = PBXGroup;
 			children = (
+				24365DB4238B66EC0034C8F8 /* when.mp3 */,
 				2422BBE8234F6DB5001EADFA /* class */,
 				2422BBE7234F6D8A001EADFA /* ViewController */,
 				B3339484232A026300F907DA /* AppDelegate.swift */,
@@ -283,6 +296,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24365DB5238B66EC0034C8F8 /* when.mp3 in Resources */,
 				B333948F232A026400F907DA /* LaunchScreen.storyboard in Resources */,
 				B333948C232A026400F907DA /* Assets.xcassets in Resources */,
 				B333948A232A026300F907DA /* Main.storyboard in Resources */,
@@ -314,12 +328,14 @@
 				248D5739234C8D8A00DFF1AE /* SubStringQuestion.swift in Sources */,
 				2453BC6F23561F2F0020A887 /* Room.swift in Sources */,
 				B3339487232A026300F907DA /* ViewController.swift in Sources */,
+				24295D34238AE2560025A2C3 /* ViewControllerTimeOut.swift in Sources */,
 				24008A46236366E9007E0970 /* ViewControllerRoom.swift in Sources */,
 				244D90A82348EC9A00DB7CC1 /* Question.swift in Sources */,
 				244D90AA2348ECA600DB7CC1 /* Gamer.swift in Sources */,
 				244D90A62348EC8D00DB7CC1 /* Choices.swift in Sources */,
 				24474B55234E15F9003B3167 /* ViewControllerPlaying.swift in Sources */,
 				B3339485232A026300F907DA /* AppDelegate.swift in Sources */,
+				24365DB3238B663E0034C8F8 /* MusicPlayer .swift in Sources */,
 				2422BBEC234F6F9E001EADFA /* SubStringChoices.swift in Sources */,
 				B36140F32355DD5D00F42065 /* SubStringGamer.swift in Sources */,
 				240FC0F123681824007C6442 /* SubStringRoom.swift in Sources */,

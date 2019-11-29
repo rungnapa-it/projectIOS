@@ -15,8 +15,11 @@ class ViewController: UIViewController {
     @IBOutlet weak var exception: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
+        user = ""
         getGamer()
-        getRoom()
+        
+        
+        
         // Do any additional setup after loading the view.
     }
     
@@ -31,6 +34,11 @@ class ViewController: UIViewController {
                 gamer.addDictionary(id:gamer.getId(), name: fieldname.text!, score: "0", high_score: "0", roomId: "-", status : "lobby")
                 gamer.setName(name: fieldname.text!)
                 
+                user = fieldname.text!
+            
+                
+                
+                
             performSegue(withIdentifier: "page2", sender: self)
             }
         }else{
@@ -44,7 +52,7 @@ class ViewController: UIViewController {
     
     func getGamer() {
         
-        let url = URL(string: "http://localhost:8081/gamer")!
+        let url = URL(string: "http://10.2.3.241:8081/gamer")!
         let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
             if let error = error {
                 print("error: \(error)")
@@ -63,28 +71,10 @@ class ViewController: UIViewController {
         }
         task.resume()
     }
-    func getRoom(){
-        let url = URL(string: "http://localhost:8081/room")!
-        let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
-            if let error = error {
-                print("error: \(error)")
-            } else {
-                if (response as? HTTPURLResponse) != nil {
-                    //print("statusCode: \(response.statusCode)")
-                }
-                if let data = data, let dataString = String(data: data, encoding: .utf8) {
-                    
-                    room.roomJSON(json: dataString)
-                    
-                   
-                }
-            }
-        }
-        task.resume()
-    }
-   
     
-        
+   
+
+    
     
     
   

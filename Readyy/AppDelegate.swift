@@ -15,6 +15,13 @@ var subStringQuestion = SubStringQuestion()
 var subStringChoices = SubStringChoices()
 var subStringGamer = SubStringGamer()
 var subStringRoom = SubStringRoom()
+var user = "";
+var roomId = "";
+var viewControllerRoom = ViewControllerRoom()
+var viewController = ViewController()
+
+var musicPlayer = MusicPlayer()
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
